@@ -1,0 +1,197 @@
+{
+  "uid" : "dcde28e823e6c073",
+  "name" : "test2",
+  "fullName" : "test_pytest.Testclass#test2",
+  "historyId" : "edb6ab534f14982e6e63d5ebd90fa984",
+  "time" : {
+    "start" : 1577785047921,
+    "stop" : 1577785048047,
+    "duration" : 126
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: a bytes-like object is required, not 'str'",
+  "statusTrace" : "self = <call_port.test_pytest.Testclass object at 0x045632D0>\n\n    def test2(self):\n        url = requests.get('https://e.jiuxiaoer.cn')\n        content = url.content\n>       assert 'jiuxiaoer' in content\nE       TypeError: a bytes-like object is required, not 'str'\n\ntest_pytest.py:70: TypeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1577785047763,
+      "stop" : 1577785047764,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_Module__pytest_setup_function",
+    "time" : {
+      "start" : 1577785047919,
+      "stop" : 1577785047919,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_Class__pytest_setup_method",
+    "time" : {
+      "start" : 1577785047919,
+      "stop" : 1577785047919,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_Module__pytest_setup_module",
+    "time" : {
+      "start" : 1577785047732,
+      "stop" : 1577785047732,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "TypeError: a bytes-like object is required, not 'str'",
+    "statusTrace" : "self = <call_port.test_pytest.Testclass object at 0x045632D0>\n\n    def test2(self):\n        url = requests.get('https://e.jiuxiaoer.cn')\n        content = url.content\n>       assert 'jiuxiaoer' in content\nE       TypeError: a bytes-like object is required, not 'str'\n\ntest_pytest.py:70: TypeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "d143a379e0e9969f",
+      "name" : "stdout",
+      "source" : "d143a379e0e9969f.txt",
+      "type" : "text/plain",
+      "size" : 79
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1577785049139,
+      "stop" : 1577785049139,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_Module__pytest_setup_function::0",
+    "time" : {
+      "start" : 1577785048088,
+      "stop" : 1577785048088,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_Class__pytest_setup_method::0",
+    "time" : {
+      "start" : 1577785048086,
+      "stop" : 1577785048086,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_Module__pytest_setup_module::0",
+    "time" : {
+      "start" : 1577785049143,
+      "stop" : 1577785049143,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_pytest"
+  }, {
+    "name" : "subSuite",
+    "value" : "Testclass"
+  }, {
+    "name" : "host",
+    "value" : "GXZ-OFFICE"
+  }, {
+    "name" : "thread",
+    "value" : "14976-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_pytest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "dcde28e823e6c073.json",
+  "parameterValues" : [ ]
+}

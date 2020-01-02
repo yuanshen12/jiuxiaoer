@@ -1,0 +1,18 @@
+platformName: Android
+platformVersion: 9
+deviceName: LKX7N17B09002482
+appName: weixin.apk
+
+appPackage: com.tencent.mm
+appActivity: com.tencent.mm.ui.LauncherUI
+chromeOptions: {'androidProcess': 'com.tencent.mm:tools'}
+
+noReset: True
+unicodeKeyboard: True
+resetKeyboard: True
+
+ip: 127.0.0.1
+port: 4723
+
+#environment: 酒小二
+environment: 叫酒开发

@@ -1,0 +1,3915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>正式商城测试报告：</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>正式商城测试报告：</h1>
+<p class='attribute'><strong>Start Time:</strong> 2020-01-19 09:59:32</p>
+<p class='attribute'><strong>Duration:</strong> 0:21:59.521634</p>
+<p class='attribute'><strong>Status:</strong> Failure 25 Error 62</p>
+
+<p class='description'>用例执行情况：</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_01.Test_A</td>
+    <td>9</td>
+    <td>0</td>
+    <td>1</td>
+    <td>8</td>
+    <td><a href="javascript:showClassDetail('c1',9)">Detail</a></td>
+</tr>
+
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_01</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        error</a>
+
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.1: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_01.py", line 15, in test_01
+    L.location_determine()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\locate.py", line 46, in location_determine
+    TouchActions(cls.driver).tap(locate_go).perform()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\common\touch_actions.py", line 47, in perform
+    action()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\common\touch_actions.py", line 57, in &lt;lambda&gt;
+    Command.SINGLE_TAP, {'element': on_element.id}))
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: unknown error: Element &lt;div class="location-btn"&gt;...&lt;/div&gt; is not clickable at point (58, 20). Other element would receive the click: &lt;div class="new-popup" style="display: block;" id="newPopup"&gt;...&lt;/div&gt;
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_02</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        error</a>
+
+    <div id='div_ft1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.2: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_01.py", line 22, in test_02
+    P = L.current_text()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\locate.py", line 58, in current_text
+    current_text = cls.driver.find_element(*cls.current_sure).text
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div[1]/div[2]/div[1]"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_03</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
+        error</a>
+
+    <div id='div_ft1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.3: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_01.py", line 30, in test_03
+    L.location_determine()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\locate.py", line 46, in location_determine
+    TouchActions(cls.driver).tap(locate_go).perform()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\common\touch_actions.py", line 47, in perform
+    action()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\common\touch_actions.py", line 57, in &lt;lambda&gt;
+    Command.SINGLE_TAP, {'element': on_element.id}))
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: unknown error: Element &lt;div class="location-btn"&gt;...&lt;/div&gt; is not clickable at point (58, 20). Other element would receive the click: &lt;div class="new-popup" style="display: block;" id="newPopup"&gt;...&lt;/div&gt;
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_04</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.4')" >
+        error</a>
+
+    <div id='div_ft1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.4: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_01.py", line 39, in test_04
+    L.location_determine()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\locate.py", line 46, in location_determine
+    TouchActions(cls.driver).tap(locate_go).perform()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\common\touch_actions.py", line 47, in perform
+    action()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\common\touch_actions.py", line 57, in &lt;lambda&gt;
+    Command.SINGLE_TAP, {'element': on_element.id}))
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: unknown error: Element &lt;div class="location-btn"&gt;...&lt;/div&gt; is not clickable at point (58, 20). Other element would receive the click: &lt;div class="new-popup" style="display: block;" id="newPopup"&gt;...&lt;/div&gt;
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_05</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.5')" >
+        error</a>
+
+    <div id='div_ft1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.5: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_01.py", line 48, in test_05
+    L.location_determine()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\locate.py", line 46, in location_determine
+    TouchActions(cls.driver).tap(locate_go).perform()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\common\touch_actions.py", line 47, in perform
+    action()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\common\touch_actions.py", line 57, in &lt;lambda&gt;
+    Command.SINGLE_TAP, {'element': on_element.id}))
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: unknown error: Element &lt;div class="location-btn"&gt;...&lt;/div&gt; is not clickable at point (58, 20). Other element would receive the click: &lt;div class="new-popup" style="display: block;" id="newPopup"&gt;...&lt;/div&gt;
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.6' class='none'>
+    <td class='failCase'><div class='testcase'>test_06</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.6')" >
+        fail</a>
+
+    <div id='div_ft1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.6: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_01.py", line 56, in test_06
+    cls.assertTrue(P.delete_open(),msg='判断删除收货地址成功')
+AssertionError: False is not true : 判断删除收货地址成功
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.7' class='none'>
+    <td class='errorCase'><div class='testcase'>test_07</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.7')" >
+        error</a>
+
+    <div id='div_ft1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.7: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_01.py", line 62, in test_07
+    L.location_determine()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\locate.py", line 46, in location_determine
+    TouchActions(cls.driver).tap(locate_go).perform()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\common\touch_actions.py", line 47, in perform
+    action()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\common\touch_actions.py", line 57, in &lt;lambda&gt;
+    Command.SINGLE_TAP, {'element': on_element.id}))
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: unknown error: Element &lt;div class="location-btn"&gt;...&lt;/div&gt; is not clickable at point (58, 20). Other element would receive the click: &lt;div class="new-popup" style="display: block;" id="newPopup"&gt;...&lt;/div&gt;
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.8' class='none'>
+    <td class='errorCase'><div class='testcase'>test_08</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.8')" >
+        error</a>
+
+    <div id='div_ft1.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.8: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\locate.py", line 201, in cut_seeks
+    cls.cut_seek()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\locate.py", line 193, in cut_seek
+    cls.driver.find_element(*cls.seek).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/sub-head/div[3]/input"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_01.py", line 70, in test_08
+    cls.assertTrue(P.cut_seeks(),msg='搜索并选择地址成功')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\locate.py", line 204, in cut_seeks
+    cls.getScreenShot('login fail')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 66, in getScreenShot
+    return cls.driver.get_screenshot_as_file(image_file)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1032, in get_screenshot_as_file
+    png = cls.get_screenshot_as_png()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1064, in get_screenshot_as_png
+    return base64.b64decode(cls.get_screenshot_as_base64().encode('ascii'))
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.9' class='none'>
+    <td class='errorCase'><div class='testcase'>test_09</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.9')" >
+        error</a>
+
+    <div id='div_ft1.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.9: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\locate.py", line 214, in cut_map
+    cls.driver.find_element(*cls.map).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_01.py", line 76, in test_09
+    cls.assertTrue(P.cut_map(),msg='切换地图选择地址成功')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\locate.py", line 219, in cut_map
+    cls.getScreenShot('login fail')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 66, in getScreenShot
+    return cls.driver.get_screenshot_as_file(image_file)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1032, in get_screenshot_as_file
+    png = cls.get_screenshot_as_png()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1064, in get_screenshot_as_png
+    return base64.b64decode(cls.get_screenshot_as_base64().encode('ascii'))
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1074, in get_screenshot_as_base64
+    return cls.execute(Command.SCREENSHOT)['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>unittest.suite._ErrorHolder</td>
+    <td>5</td>
+    <td>0</td>
+    <td>0</td>
+    <td>5</td>
+    <td><a href="javascript:showClassDetail('c2',5)">Detail</a></td>
+</tr>
+
+<tr id='ft2.1' class='none'>
+    <td class='errorCase'><div class='testcase'>Test_A)</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
+        error</a>
+
+    <div id='div_ft2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.1: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\myunit.py", line 21, in tearDownClass
+    cls.driver.close_app()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\applications.py", line 102, in close_app
+    cls.execute(Command.CLOSE_APP)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.2' class='none'>
+    <td class='errorCase'><div class='testcase'>Tset_B)</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.2')" >
+        error</a>
+
+    <div id='div_ft2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.2: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\urllib3\connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\urllib3\connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "&lt;string&gt;", line 2, in raise_from
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\urllib3\connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "D:\python3.7.3\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "D:\python3.7.3\lib\http\client.py", line 296, in begin
+    version, status, reason = cls._read_status()
+  File "D:\python3.7.3\lib\http\client.py", line 265, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\myunit.py", line 15, in setUpClass
+    cls.driver=Login().open()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\Login.py", line 22, in open
+    cls.driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 142, in __init__
+    proxy
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 157, in __init__
+    cls.start_session(capabilities, browser_profile)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 217, in start_session
+    response = cls.execute(RemoteCommand.NEW_SESSION, parameters)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = cls.command_executor.execute(driver_command, params)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return cls._request(command_info[0], url, body=data)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = cls._conn.request(method, url, body=body, headers=headers)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\urllib3\request.py", line 72, in request
+    **urlopen_kw)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\urllib3\request.py", line 150, in request_encode_body
+    return cls.urlopen(method, url, **extra_kw)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\urllib3\poolmanager.py", line 326, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\urllib3\connectionpool.py", line 641, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\urllib3\util\retry.py", line 368, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\urllib3\connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\urllib3\connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "&lt;string&gt;", line 2, in raise_from
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\urllib3\connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "D:\python3.7.3\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "D:\python3.7.3\lib\http\client.py", line 296, in begin
+    version, status, reason = cls._read_status()
+  File "D:\python3.7.3\lib\http\client.py", line 265, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.3' class='none'>
+    <td class='errorCase'><div class='testcase'>Test_C)</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.3')" >
+        error</a>
+
+    <div id='div_ft2.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.3: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\myunit.py", line 15, in setUpClass
+    cls.driver=Login().open()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\Login.py", line 25, in open
+    cls.driver.find_element_by_android_uiautomator('text(\"我要喝酒\")').click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 380, in find_element_by_android_uiautomator
+    return cls.find_element(by=MobileBy.ANDROID_UIAUTOMATOR, value=uia_string)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.4' class='none'>
+    <td class='errorCase'><div class='testcase'>Test_E)</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.4')" >
+        error</a>
+
+    <div id='div_ft2.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.4: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\myunit.py", line 21, in tearDownClass
+    cls.driver.close_app()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\applications.py", line 102, in close_app
+    cls.execute(Command.CLOSE_APP)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.5' class='none'>
+    <td class='errorCase'><div class='testcase'>Test_G)</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.5')" >
+        error</a>
+
+    <div id='div_ft2.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.5: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\myunit.py", line 21, in tearDownClass
+    cls.driver.close_app()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\applications.py", line 102, in close_app
+    cls.execute(Command.CLOSE_APP)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_04.Test_D</td>
+    <td>17</td>
+    <td>0</td>
+    <td>8</td>
+    <td>9</td>
+    <td><a href="javascript:showClassDetail('c3',17)">Detail</a></td>
+</tr>
+
+<tr id='ft3.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_47</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.1')" >
+        error</a>
+
+    <div id='div_ft3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.1: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_04.py", line 10, in test_47
+    cls.assertTrue(L.Spilits(),msg='断言从首页进入白酒页面成功')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_liquor.py", line 46, in Spilits
+    grape_text.click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    cls._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return cls._parent.execute(command, params)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: unknown error: Element &lt;span&gt;...&lt;/span&gt; is not clickable at point (225, 278). Other element would receive the click: &lt;img src="https://img.jiuxiaoer.cn/d341561052ab4bf6b6570a630bd6eb55.png@!big418" alt=""&gt;
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_48</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.2')" >
+        fail</a>
+
+    <div id='div_ft3.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.2: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_04.py", line 15, in test_48
+    cls.assertTrue(L.TO_sales(),msg='断言切换销量排序成功')
+AssertionError: False is not true : 断言切换销量排序成功
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_49</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.3')" >
+        error</a>
+
+    <div id='div_ft3.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.3: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_04.py", line 20, in test_49
+    cls.assertGreaterEqual(L.prich_One(),L.prich_Two(),msg='断言切换价格从高到低切成功')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_liquor.py", line 63, in prich_One
+    cls.driver.find_element(*cls.comprehensive_open).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/nav[2]/ul/li[2]"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_50</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.4')" >
+        error</a>
+
+    <div id='div_ft3.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.4: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_04.py", line 25, in test_50
+    cls.assertLessEqual(L.prich_Low(),L.prich_Two(),msg='断言切换价格从低到高成功')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_liquor.py", line 90, in prich_Low
+    cls.driver.find_element(*cls.comprehensive_open).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/nav[2]/ul/li[2]"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.5' class='none'>
+    <td class='failCase'><div class='testcase'>test_51</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.5')" >
+        fail</a>
+
+    <div id='div_ft3.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.5: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_04.py", line 30, in test_51
+    cls.assertTrue(L.Comprehensive(),msg='断言切换综合排序成功')
+AssertionError: False is not true : 断言切换综合排序成功
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.6' class='none'>
+    <td class='failCase'><div class='testcase'>test_52</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.6')" >
+        fail</a>
+
+    <div id='div_ft3.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.6: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_04.py", line 35, in test_52
+    cls.assertTrue(L.Brand(),msg='断言切换到筛选品牌成功')
+AssertionError: False is not true : 断言切换到筛选品牌成功
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.7' class='none'>
+    <td class='failCase'><div class='testcase'>test_53</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.7')" >
+        fail</a>
+
+    <div id='div_ft3.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.7: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_04.py", line 40, in test_53
+    cls.assertTrue(L.Prich_screen(),msg='断言切换到筛选价格成功')
+AssertionError: False is not true : 断言切换到筛选价格成功
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.8' class='none'>
+    <td class='failCase'><div class='testcase'>test_54</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.8')" >
+        fail</a>
+
+    <div id='div_ft3.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.8: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_04.py", line 46, in test_54
+    cls.assertTrue(L.Place(),msg='断言切换到筛选产地成功')
+AssertionError: False is not true : 断言切换到筛选产地成功
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.9' class='none'>
+    <td class='failCase'><div class='testcase'>test_55</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.9')" >
+        fail</a>
+
+    <div id='div_ft3.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.9: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_04.py", line 51, in test_55
+    cls.assertTrue(L.Ethyl(),msg='断言切换到筛选酒精度成功')
+AssertionError: False is not true : 断言切换到筛选酒精度成功
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.10' class='none'>
+    <td class='failCase'><div class='testcase'>test_56</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.10')" >
+        fail</a>
+
+    <div id='div_ft3.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.10: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_04.py", line 56, in test_56
+    cls.assertTrue(L.Capacity(),msg='断言切换到筛选容量成功')
+AssertionError: False is not true : 断言切换到筛选容量成功
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.11' class='none'>
+    <td class='failCase'><div class='testcase'>test_57</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.11')" >
+        fail</a>
+
+    <div id='div_ft3.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.11: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_04.py", line 61, in test_57
+    cls.assertTrue(L.Reset(),msg='断言筛选页面重置成功')
+AssertionError: False is not true : 断言筛选页面重置成功
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.12' class='none'>
+    <td class='errorCase'><div class='testcase'>test_58</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.12')" >
+        error</a>
+
+    <div id='div_ft3.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.12: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_04.py", line 66, in test_58
+    suer = L.wine_text()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_liquor.py", line 218, in wine_text
+    cls.driver.find_element(*cls.TO).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/nav[2]/ul/li[1]"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.13' class='none'>
+    <td class='errorCase'><div class='testcase'>test_59</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.13')" >
+        error</a>
+
+    <div id='div_ft3.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.13: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_04.py", line 72, in test_59
+    suer = L.liquor_text()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_liquor.py", line 227, in liquor_text
+    cls.driver.find_element(*cls.TO).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/nav[2]/ul/li[1]"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.14' class='none'>
+    <td class='errorCase'><div class='testcase'>test_60</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.14')" >
+        error</a>
+
+    <div id='div_ft3.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.14: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_04.py", line 78, in test_60
+    suer = L.foreign_text()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_liquor.py", line 236, in foreign_text
+    cls.driver.find_element(*cls.TO).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/nav[2]/ul/li[1]"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.15' class='none'>
+    <td class='errorCase'><div class='testcase'>test_61</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.15')" >
+        error</a>
+
+    <div id='div_ft3.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.15: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_04.py", line 84, in test_61
+    suer = L.beer_text()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_liquor.py", line 245, in beer_text
+    cls.driver.find_element(*cls.TO).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/nav[2]/ul/li[1]"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.16' class='none'>
+    <td class='errorCase'><div class='testcase'>test_62</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.16')" >
+        error</a>
+
+    <div id='div_ft3.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.16: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_04.py", line 90, in test_62
+    suer = L.drunk_text()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_liquor.py", line 254, in drunk_text
+    cls.driver.find_element(*cls.TO).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/nav[2]/ul/li[1]"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.17' class='none'>
+    <td class='errorCase'><div class='testcase'>test_63</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.17')" >
+        error</a>
+
+    <div id='div_ft3.17' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.17').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.17: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_04.py", line 96, in test_63
+    suer = L.drinks_text()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_liquor.py", line 263, in drinks_text
+    cls.driver.find_element(*cls.TO).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/nav[2]/ul/li[1]"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_05.Test_E</td>
+    <td>17</td>
+    <td>0</td>
+    <td>2</td>
+    <td>15</td>
+    <td><a href="javascript:showClassDetail('c4',17)">Detail</a></td>
+</tr>
+
+<tr id='ft4.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_64</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.1')" >
+        error</a>
+
+    <div id='div_ft4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.1: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_05.py", line 10, in test_64
+    cls.assertTrue(L.Foreign(),msg='断言从首页进入洋酒页面成功')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_foreign.py", line 41, in Foreign
+    cls.wait_time(2)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 130, in wait_time
+    cls.driver.wait_activity(".base.ui.MainActivity", T)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 78, in wait_activity
+    lambda d: d.current_activity == activity)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\support\wait.py", line 71, in until
+    value = method(cls._driver)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 78, in &lt;lambda&gt;
+    lambda d: d.current_activity == activity)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 63, in current_activity
+    return cls.execute(Command.GET_CURRENT_ACTIVITY)['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_65</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.2')" >
+        fail</a>
+
+    <div id='div_ft4.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.2: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_05.py", line 15, in test_65
+    cls.assertTrue(L.TO_sales(),msg='断言切换销量排序成功')
+AssertionError: False is not true : 断言切换销量排序成功
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_66</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.3')" >
+        error</a>
+
+    <div id='div_ft4.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.3: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_05.py", line 20, in test_66
+    cls.assertGreaterEqual(L.prich_One(),L.prich_Two(),msg='断言切换价格从高到低切成功')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_foreign.py", line 64, in prich_One
+    cls.driver.find_element(*cls.comprehensive_open).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_67</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.4')" >
+        error</a>
+
+    <div id='div_ft4.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.4: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_05.py", line 25, in test_67
+    cls.assertLessEqual(L.prich_Low(),L.prich_Two(),msg='断言切换价格从低到高成功')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_foreign.py", line 88, in prich_Low
+    cls.driver.find_element(*cls.comprehensive_open).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.5' class='none'>
+    <td class='failCase'><div class='testcase'>test_68</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.5')" >
+        fail</a>
+
+    <div id='div_ft4.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.5: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_05.py", line 30, in test_68
+    cls.assertTrue(L.Comprehensive(),msg='断言切换综合排序成功')
+AssertionError: False is not true : 断言切换综合排序成功
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_69</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.6')" >
+        error</a>
+
+    <div id='div_ft4.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.6: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_05.py", line 35, in test_69
+    cls.assertTrue(L.Brand(),msg='断言切换到筛选品牌成功')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_foreign.py", line 107, in Brand
+    cls.wait_time(3)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 130, in wait_time
+    cls.driver.wait_activity(".base.ui.MainActivity", T)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 78, in wait_activity
+    lambda d: d.current_activity == activity)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\support\wait.py", line 71, in until
+    value = method(cls._driver)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 78, in &lt;lambda&gt;
+    lambda d: d.current_activity == activity)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 63, in current_activity
+    return cls.execute(Command.GET_CURRENT_ACTIVITY)['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.7' class='none'>
+    <td class='errorCase'><div class='testcase'>test_70</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.7')" >
+        error</a>
+
+    <div id='div_ft4.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.7: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_05.py", line 40, in test_70
+    cls.assertTrue(L.Prich_screen(),msg='断言切换到筛选价格成功')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_foreign.py", line 119, in Prich_screen
+    cls.wait_time(3)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 130, in wait_time
+    cls.driver.wait_activity(".base.ui.MainActivity", T)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 78, in wait_activity
+    lambda d: d.current_activity == activity)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\support\wait.py", line 71, in until
+    value = method(cls._driver)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 78, in &lt;lambda&gt;
+    lambda d: d.current_activity == activity)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 63, in current_activity
+    return cls.execute(Command.GET_CURRENT_ACTIVITY)['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.8' class='none'>
+    <td class='errorCase'><div class='testcase'>test_71</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.8')" >
+        error</a>
+
+    <div id='div_ft4.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.8: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_05.py", line 46, in test_71
+    cls.assertTrue(L.Place(),msg='断言切换到筛选产地成功')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_foreign.py", line 145, in Place
+    cls.wait_time(3)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 130, in wait_time
+    cls.driver.wait_activity(".base.ui.MainActivity", T)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 78, in wait_activity
+    lambda d: d.current_activity == activity)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\support\wait.py", line 71, in until
+    value = method(cls._driver)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 78, in &lt;lambda&gt;
+    lambda d: d.current_activity == activity)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 63, in current_activity
+    return cls.execute(Command.GET_CURRENT_ACTIVITY)['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.9' class='none'>
+    <td class='errorCase'><div class='testcase'>test_72</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.9')" >
+        error</a>
+
+    <div id='div_ft4.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.9: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_05.py", line 51, in test_72
+    cls.assertTrue(L.Ethyl(),msg='断言切换到筛选酒精度成功')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_foreign.py", line 159, in Ethyl
+    cls.wait_time(3)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 130, in wait_time
+    cls.driver.wait_activity(".base.ui.MainActivity", T)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 78, in wait_activity
+    lambda d: d.current_activity == activity)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\support\wait.py", line 71, in until
+    value = method(cls._driver)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 78, in &lt;lambda&gt;
+    lambda d: d.current_activity == activity)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 63, in current_activity
+    return cls.execute(Command.GET_CURRENT_ACTIVITY)['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.10' class='none'>
+    <td class='errorCase'><div class='testcase'>test_73</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.10')" >
+        error</a>
+
+    <div id='div_ft4.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.10: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_05.py", line 56, in test_73
+    cls.assertTrue(L.Capacity(),msg='断言切换到筛选容量成功')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_foreign.py", line 173, in Capacity
+    cls.wait_time(3)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 130, in wait_time
+    cls.driver.wait_activity(".base.ui.MainActivity", T)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 78, in wait_activity
+    lambda d: d.current_activity == activity)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\support\wait.py", line 71, in until
+    value = method(cls._driver)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 78, in &lt;lambda&gt;
+    lambda d: d.current_activity == activity)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 63, in current_activity
+    return cls.execute(Command.GET_CURRENT_ACTIVITY)['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.11' class='none'>
+    <td class='errorCase'><div class='testcase'>test_74</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.11')" >
+        error</a>
+
+    <div id='div_ft4.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.11: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_05.py", line 61, in test_74
+    cls.assertTrue(L.Reset(),msg='断言筛选页面重置成功')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_foreign.py", line 187, in Reset
+    cls.wait_time(3)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 130, in wait_time
+    cls.driver.wait_activity(".base.ui.MainActivity", T)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 78, in wait_activity
+    lambda d: d.current_activity == activity)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\support\wait.py", line 71, in until
+    value = method(cls._driver)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 78, in &lt;lambda&gt;
+    lambda d: d.current_activity == activity)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 63, in current_activity
+    return cls.execute(Command.GET_CURRENT_ACTIVITY)['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.12' class='none'>
+    <td class='errorCase'><div class='testcase'>test_75</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.12')" >
+        error</a>
+
+    <div id='div_ft4.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.12: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_05.py", line 66, in test_75
+    suer = L.wine_text()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_foreign.py", line 203, in wine_text
+    cls.wait_time(2)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 130, in wait_time
+    cls.driver.wait_activity(".base.ui.MainActivity", T)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 78, in wait_activity
+    lambda d: d.current_activity == activity)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\support\wait.py", line 71, in until
+    value = method(cls._driver)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 78, in &lt;lambda&gt;
+    lambda d: d.current_activity == activity)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\extensions\android\activities.py", line 63, in current_activity
+    return cls.execute(Command.GET_CURRENT_ACTIVITY)['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.13' class='none'>
+    <td class='errorCase'><div class='testcase'>test_76</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.13')" >
+        error</a>
+
+    <div id='div_ft4.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.13: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_05.py", line 72, in test_76
+    suer = L.liquor_text()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_foreign.py", line 213, in liquor_text
+    cls.driver.find_element(*cls.TO).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.14' class='none'>
+    <td class='errorCase'><div class='testcase'>test_77</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.14')" >
+        error</a>
+
+    <div id='div_ft4.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.14: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_05.py", line 78, in test_77
+    suer = L.foreign_text()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_foreign.py", line 222, in foreign_text
+    cls.driver.find_element(*cls.TO).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.15' class='none'>
+    <td class='errorCase'><div class='testcase'>test_78</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.15')" >
+        error</a>
+
+    <div id='div_ft4.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.15: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_05.py", line 84, in test_78
+    suer = L.beer_text()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_foreign.py", line 231, in beer_text
+    cls.driver.find_element(*cls.TO).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.16' class='none'>
+    <td class='errorCase'><div class='testcase'>test_79</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.16')" >
+        error</a>
+
+    <div id='div_ft4.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.16: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_05.py", line 90, in test_79
+    suer = L.drunk_text()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_foreign.py", line 240, in drunk_text
+    cls.driver.find_element(*cls.TO).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.17' class='none'>
+    <td class='errorCase'><div class='testcase'>test_80</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.17')" >
+        error</a>
+
+    <div id='div_ft4.17' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.17').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.17: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_05.py", line 96, in test_80
+    suer = L.drinks_text()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Drink\switch_foreign.py", line 249, in drinks_text
+    cls.driver.find_element(*cls.TO).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: A session is either terminated or not started
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_07.Test_G</td>
+    <td>5</td>
+    <td>0</td>
+    <td>1</td>
+    <td>4</td>
+    <td><a href="javascript:showClassDetail('c5',5)">Detail</a></td>
+</tr>
+
+<tr id='ft5.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_81</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.1')" >
+        fail</a>
+
+    <div id='div_ft5.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.1: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_07.py", line 11, in test_81
+    cls.assertTrue(L.deles(),msg='清空购物车')
+AssertionError: False is not true : 清空购物车
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft5.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_82</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.2')" >
+        error</a>
+
+    <div id='div_ft5.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.2: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_07.py", line 16, in test_82
+    cls.assertIn('帮你挑',L.Suer(),msg='首页新用户首单页面')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\activity.py", line 60, in Suer
+    cls.driver.find_element(*cls.new_suer).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    cls._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return cls._parent.execute(command, params)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: unknown error: Element &lt;a class="a" linktype="E" link="302" href="/h?rid=302"&gt;...&lt;/a&gt; is not clickable at point (45, 323). Other element would receive the click: &lt;img src="https://img.jiuxiaoer.cn/d341561052ab4bf6b6570a630bd6eb55.png@!big418" alt=""&gt;
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft5.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_83</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.3')" >
+        error</a>
+
+    <div id='div_ft5.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.3: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_07.py", line 21, in test_83
+    cls.assertIn('帮你挑', L.Goddes(), msg='首页女神专区')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\activity.py", line 68, in Goddes
+    cls.driver.find_element(*cls.goddes).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: window was already closed
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft5.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_84</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.4')" >
+        error</a>
+
+    <div id='div_ft5.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.4: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_07.py", line 26, in test_84
+    Foods = L.Foods()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\activity.py", line 76, in Foods
+    foods = cls.driver.find_element(*cls.foods)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: window was already closed
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft5.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_85</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.5')" >
+        error</a>
+
+    <div id='div_ft5.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.5: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_07.py", line 32, in test_85
+    cls.assertTrue(L.Pot(),msg='首页酒友圈')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\activity.py", line 93, in Pot
+    cls.driver.find_element(*cls.pot).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: window was already closed
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_08.Test_H</td>
+    <td>5</td>
+    <td>0</td>
+    <td>0</td>
+    <td>5</td>
+    <td><a href="javascript:showClassDetail('c6',5)">Detail</a></td>
+</tr>
+
+<tr id='ft6.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_95</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.1')" >
+        error</a>
+
+    <div id='div_ft6.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.1: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_08.py", line 11, in test_95
+    cls.assertTrue(L.Qiehuan(1))
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\discover.py", line 38, in Qiehuan
+    cls.base(1)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 137, in base
+    cls.driver.find_element(*cls.fianax).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    cls._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return cls._parent.execute(command, params)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: unknown error: Element &lt;div class="nav-item"&gt;...&lt;/div&gt; is not clickable at point (108, 589). Other element would receive the click: &lt;div class="new-popup" style="display: block;" id="newPopup"&gt;...&lt;/div&gt;
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft6.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_96</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.2')" >
+        error</a>
+
+    <div id='div_ft6.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.2: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_08.py", line 16, in test_96
+    cls.assertTrue(L.Qiehuan(2))
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\discover.py", line 38, in Qiehuan
+    cls.base(1)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 137, in base
+    cls.driver.find_element(*cls.fianax).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    cls._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return cls._parent.execute(command, params)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: unknown error: Element &lt;div class="nav-item"&gt;...&lt;/div&gt; is not clickable at point (108, 589). Other element would receive the click: &lt;div class="new-popup" style="display: block;" id="newPopup"&gt;...&lt;/div&gt;
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft6.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_97</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.3')" >
+        error</a>
+
+    <div id='div_ft6.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.3: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_08.py", line 21, in test_97
+    cls.assertTrue(L.Qiehuan(0))
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\discover.py", line 38, in Qiehuan
+    cls.base(1)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 137, in base
+    cls.driver.find_element(*cls.fianax).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    cls._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return cls._parent.execute(command, params)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: unknown error: Element &lt;div class="nav-item"&gt;...&lt;/div&gt; is not clickable at point (108, 589). Other element would receive the click: &lt;div class="new-popup" style="display: block;" id="newPopup"&gt;...&lt;/div&gt;
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft6.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_98</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.4')" >
+        error</a>
+
+    <div id='div_ft6.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.4: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\discover.py", line 26, in Faxian
+    cls.driver.find_element(*cls.jia).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="visit-302"]/div[2]/div[1]/div/div[1]/div[4]/table/tbody/tr/td[2]/div/button[2]"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_08.py", line 26, in test_98
+    cls.assertTrue(L.Faxian())
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\discover.py", line 28, in Faxian
+    cls.driver.find_element(*cls.jia_a).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="visit-302"]/div[2]/div[1]/div/div[2]/div[3]/table/tbody/tr/td[2]/div/button[2]"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft6.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_99</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.5')" >
+        error</a>
+
+    <div id='div_ft6.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.5: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\discover.py", line 59, in Xiangqin
+    cls.driver.find_element(*cls.xiang).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="visit-302"]/div[2]/div[1]/div/div[1]/div[3]/div[1]"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_08.py", line 31, in test_99
+    SUAN = L.Xiangqin()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\discover.py", line 61, in Xiangqin
+    cls.driver.find_element(*cls.xiang_a).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="visit-302"]/div[2]/div[1]/div/div[2]/div[1]/div[1]"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_09.Test_I</td>
+    <td>5</td>
+    <td>0</td>
+    <td>4</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c7',5)">Detail</a></td>
+</tr>
+
+<tr id='ft7.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_100</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft7.1')" >
+        error</a>
+
+    <div id='div_ft7.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft7.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft7.1: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_09.py", line 11, in test_100
+    L.open()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\indent.py", line 15, in open
+    cls.base(3)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 141, in base
+    cls.driver.find_element(*cls.dingdan).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    cls._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return cls._parent.execute(command, params)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: unknown error: Element &lt;div class="nav-item nav-item-cart"&gt;...&lt;/div&gt; is not clickable at point (252, 589). Other element would receive the click: &lt;div class="new-popup" style="display: block;" id="newPopup"&gt;...&lt;/div&gt;
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft7.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_101</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft7.2')" >
+        fail</a>
+
+    <div id='div_ft7.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft7.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft7.2: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_09.py", line 17, in test_101
+    cls.assertTrue(L.qiehuan(2),msg='切换待收货')
+AssertionError: False is not true : 切换待收货
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft7.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_102</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft7.3')" >
+        fail</a>
+
+    <div id='div_ft7.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft7.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft7.3: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_09.py", line 22, in test_102
+    cls.assertTrue(L.qiehuan(3),msg='切换待收货')
+AssertionError: False is not true : 切换待收货
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft7.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_103</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft7.4')" >
+        fail</a>
+
+    <div id='div_ft7.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft7.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft7.4: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_09.py", line 27, in test_103
+    cls.assertTrue(L.qiehuan(4),msg='切换待评价')
+AssertionError: False is not true : 切换待评价
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft7.5' class='none'>
+    <td class='failCase'><div class='testcase'>test_104</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft7.5')" >
+        fail</a>
+
+    <div id='div_ft7.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft7.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft7.5: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_09.py", line 32, in test_104
+    cls.assertTrue(L.like(),msg='没有订单进入立即下单')
+AssertionError: None is not true : 没有订单进入立即下单
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_10.Test_J</td>
+    <td>5</td>
+    <td>0</td>
+    <td>1</td>
+    <td>4</td>
+    <td><a href="javascript:showClassDetail('c8',5)">Detail</a></td>
+</tr>
+
+<tr id='ft8.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_105</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft8.1')" >
+        error</a>
+
+    <div id='div_ft8.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft8.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft8.1: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_10.py", line 11, in test_105
+    EL = L.Nicheng()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Me\personal.py", line 34, in Nicheng
+    cls.geren()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Me\personal.py", line 30, in geren
+    cls.base(4)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 143, in base
+    cls.driver.find_element(*cls.wode).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    cls._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return cls._parent.execute(command, params)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: unknown error: Element &lt;div class="nav-text"&gt;...&lt;/div&gt; is not clickable at point (324, 601). Other element would receive the click: &lt;div class="new-popup" style="display: block;" id="newPopup"&gt;...&lt;/div&gt;
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft8.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_106</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft8.2')" >
+        error</a>
+
+    <div id='div_ft8.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft8.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft8.2: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_10.py", line 17, in test_106
+    EL = L.Xinbie()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Me\personal.py", line 43, in Xinbie
+    cls.driver.find_element(*cls.xingbie).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div[4]/div/div[2]/div[2]/i"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft8.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_107</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft8.3')" >
+        error</a>
+
+    <div id='div_ft8.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft8.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft8.3: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_10.py", line 23, in test_107
+    EL = L.Shengri()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Me\personal.py", line 52, in Shengri
+    cls.driver.find_element(*cls.shengri).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div[6]/div/div[2]/div[2]/i"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft8.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_108</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft8.4')" >
+        error</a>
+
+    <div id='div_ft8.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft8.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft8.4: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_10.py", line 29, in test_108
+    EL = L.Xinqu()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Me\personal.py", line 64, in Xinqu
+    cls.driver.find_element(*cls.zidingyi).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div[9]/div/i"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft8.5' class='none'>
+    <td class='failCase'><div class='testcase'>test_109</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft8.5')" >
+        fail</a>
+
+    <div id='div_ft8.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft8.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft8.5: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_10.py", line 35, in test_109
+    cls.assertTrue(L.Xinqu_S())
+AssertionError: False is not true
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_11.Test_J</td>
+    <td>5</td>
+    <td>0</td>
+    <td>4</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c9',5)">Detail</a></td>
+</tr>
+
+<tr id='ft9.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_110</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.1')" >
+        error</a>
+
+    <div id='div_ft9.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft9.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft9.1: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_11.py", line 11, in test_110
+    cls.assertTrue(L.Chengzhangzhi(),msg='成长值')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Me\Me_to.py", line 19, in Chengzhangzhi
+    cls.base(4)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 143, in base
+    cls.driver.find_element(*cls.wode).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    cls._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return cls._parent.execute(command, params)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: unknown error: Element &lt;div class="nav-text"&gt;...&lt;/div&gt; is not clickable at point (324, 601). Other element would receive the click: &lt;div class="new-popup" style="display: block;" id="newPopup"&gt;...&lt;/div&gt;
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft9.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_111</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.2')" >
+        fail</a>
+
+    <div id='div_ft9.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft9.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft9.2: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_11.py", line 16, in test_111
+    cls.assertTrue(L.Jifen(),msg= '积分')
+AssertionError: False is not true : 积分
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft9.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_112</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.3')" >
+        fail</a>
+
+    <div id='div_ft9.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft9.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft9.3: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_11.py", line 21, in test_112
+    cls.assertTrue(L.Xiangxi(),msg='积分详细')
+AssertionError: False is not true : 积分详细
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft9.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_113</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.4')" >
+        fail</a>
+
+    <div id='div_ft9.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft9.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft9.4: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_11.py", line 26, in test_113
+    cls.assertTrue(L.Youhuijuan(), msg='优惠劵')
+AssertionError: False is not true : 优惠劵
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft9.5' class='none'>
+    <td class='failCase'><div class='testcase'>test_114</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.5')" >
+        fail</a>
+
+    <div id='div_ft9.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft9.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft9.5: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_11.py", line 31, in test_114
+    cls.assertTrue(L.Y_xiangqin(), msg='优惠劵详细')
+AssertionError: False is not true : 优惠劵详细
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_12.Test_L</td>
+    <td>5</td>
+    <td>0</td>
+    <td>0</td>
+    <td>5</td>
+    <td><a href="javascript:showClassDetail('c10',5)">Detail</a></td>
+</tr>
+
+<tr id='ft10.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_115</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft10.1')" >
+        error</a>
+
+    <div id='div_ft10.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft10.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft10.1: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_12.py", line 11, in test_115
+    EL = L.Wo()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Me\Me_three.py", line 19, in Wo
+    cls.base(4)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 143, in base
+    cls.driver.find_element(*cls.wode).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    cls._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return cls._parent.execute(command, params)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: unknown error: Element &lt;div class="nav-text"&gt;...&lt;/div&gt; is not clickable at point (324, 601). Other element would receive the click: &lt;div class="new-popup" style="display: block;" id="newPopup"&gt;...&lt;/div&gt;
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft10.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_116</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft10.2')" >
+        error</a>
+
+    <div id='div_ft10.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft10.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft10.2: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_12.py", line 17, in test_116
+    EL = L.Daifu(0)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Me\Me_three.py", line 31, in Daifu
+    EL = cls.driver.find_element(*cls.daifu).text
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div[5]/div[2]/ul/li[1]"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft10.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_117</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft10.3')" >
+        error</a>
+
+    <div id='div_ft10.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft10.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft10.3: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_12.py", line 23, in test_117
+    EL = L.Daifu(1)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Me\Me_three.py", line 35, in Daifu
+    EL = cls.driver.find_element(*cls.daifa).text
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div[5]/div[2]/ul/li[3]"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft10.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_118</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft10.4')" >
+        error</a>
+
+    <div id='div_ft10.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft10.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft10.4: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_12.py", line 29, in test_118
+    EL = L.Daifu(2)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Me\Me_three.py", line 39, in Daifu
+    EL = cls.driver.find_element(*cls.daishou).text
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: window was already closed
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft10.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_119</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft10.5')" >
+        error</a>
+
+    <div id='div_ft10.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft10.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft10.5: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_12.py", line 35, in test_119
+    EL = L.Daifu(3)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Me\Me_three.py", line 43, in Daifu
+    EL = cls.driver.find_element(*cls.daiping).text
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: window was already closed
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_13.Test_M</td>
+    <td>6</td>
+    <td>0</td>
+    <td>4</td>
+    <td>2</td>
+    <td><a href="javascript:showClassDetail('c11',6)">Detail</a></td>
+</tr>
+
+<tr id='ft11.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_120</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft11.1')" >
+        error</a>
+
+    <div id='div_ft11.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft11.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft11.1: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_13.py", line 11, in test_120
+    L.open()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Me\Me_four.py", line 38, in open
+    cls.base(4)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 143, in base
+    cls.driver.find_element(*cls.wode).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    cls._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return cls._parent.execute(command, params)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: unknown error: Element &lt;div class="nav-text"&gt;...&lt;/div&gt; is not clickable at point (324, 601). Other element would receive the click: &lt;div class="new-popup" style="display: block;" id="newPopup"&gt;...&lt;/div&gt;
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft11.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_121</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft11.2')" >
+        fail</a>
+
+    <div id='div_ft11.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft11.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft11.2: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_13.py", line 17, in test_121
+    cls.assertTrue(L.Zuji(2),msg='我的收藏')
+AssertionError: False is not true : 我的收藏
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft11.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_123</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft11.3')" >
+        fail</a>
+
+    <div id='div_ft11.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft11.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft11.3: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_13.py", line 22, in test_123
+    cls.assertTrue(L.Zuji(3),msg='我的问答')
+AssertionError: False is not true : 我的问答
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft11.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_124</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft11.4')" >
+        fail</a>
+
+    <div id='div_ft11.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft11.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft11.4: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_13.py", line 27, in test_124
+    cls.assertTrue(L.Zuji(4),msg='我的会员')
+AssertionError: False is not true : 我的会员
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft11.5' class='none'>
+    <td class='failCase'><div class='testcase'>test_125</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft11.5')" >
+        fail</a>
+
+    <div id='div_ft11.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft11.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft11.5: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_13.py", line 32, in test_125
+    cls.assertTrue(L.Zuji(5),msg='我的发票')
+AssertionError: False is not true : 我的发票
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft11.6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_126</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft11.6')" >
+        error</a>
+
+    <div id='div_ft11.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft11.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft11.6: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_13.py", line 37, in test_126
+    cls.assertTrue(L.Zuji(6),msg='地址管理')
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Me\Me_four.py", line 128, in Zuji
+    cls.driver.find_element(*cls.dizhi).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div[12]/div[3]/div/div[2]"}
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_14.Test_N</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c12',1)">Detail</a></td>
+</tr>
+
+<tr id='ft12.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_126</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft12.1')" >
+        error</a>
+
+    <div id='div_ft12.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft12.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft12.1: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_14.py", line 11, in test_126
+    L.open()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\Me\Me_five.py", line 28, in open
+    cls.base(4)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\common\common_fun.py", line 143, in base
+    cls.driver.find_element(*cls.wode).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    cls._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return cls._parent.execute(command, params)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: unknown error: Element &lt;div class="nav-text"&gt;...&lt;/div&gt; is not clickable at point (324, 601). Other element would receive the click: &lt;div class="new-popup" style="display: block;" id="newPopup"&gt;...&lt;/div&gt;
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_15.Test_N</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td>2</td>
+    <td><a href="javascript:showClassDetail('c13',2)">Detail</a></td>
+</tr>
+
+<tr id='ft13.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_127</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft13.1')" >
+        error</a>
+
+    <div id='div_ft13.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft13.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft13.1: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_15.py", line 11, in test_127
+    T = L.Sou_qingouwuche()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\sousou.py", line 20, in Sou_qingouwuche
+    cls.driver.find_element(*cls.shouye_sou).click()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    cls._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return cls._parent.execute(command, params)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: unknown error: Element &lt;input type="text" maxlength="20" autocomplete="off" placeholder="搜索您想要的酒水" readonly=""&gt; is not clickable at point (244, 20). Other element would receive the click: &lt;div class="new-popup" style="display: block;" id="newPopup"&gt;...&lt;/div&gt;
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft13.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_128</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft13.2')" >
+        error</a>
+
+    <div id='div_ft13.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft13.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft13.2: b''Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\test_case\test_15.py", line 17, in test_128
+    T = L.Jiesuan()
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat_mall\businessView\sousou.py", line 42, in Jiesuan
+    T = cls.driver.find_element(*cls.jiage).text
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\webdriver.py", line 272, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    cls.error_handler.check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, cls).check_response(response)
+  File "C:\Users\Administrator\PycharmProjects\jiuxiaoer\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: window was already closed
+  (Session info: chrome=66.0.3359.126)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>87</td>
+    <td>0</td>
+    <td>25</td>
+    <td>62</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>

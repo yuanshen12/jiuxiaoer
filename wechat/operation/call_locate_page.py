@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from wechat.common.call_wechat import Wechat
+from wechat.common.call_wechat import wechat
 from wechat.common.call_common import Login
 from selenium.webdriver.common.touch_actions import TouchActions
 from time import sleep
@@ -44,7 +44,7 @@ class Locate(Login):
 
 
 if __name__ == '__main__':
-    driver = Wechat()
+    driver = wechat()
     PI = Locate(driver)
     PI.call_use_locate()
     PI.call_locate(0)

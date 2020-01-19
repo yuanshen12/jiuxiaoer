@@ -1,6 +1,6 @@
 from appium import webdriver
 import yaml
-import os, sys
+import os
 
 #  启动微信并打开微商城
 

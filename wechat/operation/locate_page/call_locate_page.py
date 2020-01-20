@@ -14,7 +14,6 @@ class Locate(Login):
     choose_seeks = (By.XPATH, '/html/body/div[1]/div/div[3]/input')
     choose_seek_use = (By.CLASS_NAME, 'wrap')
 
-
     def call_use_locate(self):  # 首页进入定位设置页面
         self.login()
         try:

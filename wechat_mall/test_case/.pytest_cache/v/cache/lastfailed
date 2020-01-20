@@ -1,0 +1,14 @@
+{
+  "test_001.py::locate_case::test_08": true,
+  "test_02.py::Test::test_08": true,
+  "test_02.py::Test::test_09": true,
+  "test_02.py::Test::test_10": true,
+  "test_02.py::Test::test_11": true,
+  "test_02.py::Test_open::test_08": true,
+  "test_02.py::Test_open::test_09": true,
+  "test_02.py::Test_open::test_10": true,
+  "test_02.py::Test_open::test_11": true,
+  "test_03.py::locate_case::test_31": true,
+  "test_04.py::locate_case::test_49": true,
+  "test_04.py::locate_case::test_58": true
+}

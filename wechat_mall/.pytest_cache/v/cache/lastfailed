@@ -1,0 +1,16 @@
+{
+  "test_case/test_001.py::locate_case::test_08": true,
+  "test_case/test_01.py::locate_case::test_01": true,
+  "test_case/test_01.py::locate_case::test_02": true,
+  "test_case/test_01.py::locate_case::test_03": true,
+  "test_case/test_01.py::locate_case::test_04": true,
+  "test_case/test_01.py::locate_case::test_05": true,
+  "test_case/test_01.py::locate_case::test_06": true,
+  "test_case/test_01.py::locate_case::test_07": true,
+  "test_case/test_01.py::locate_case::test_08": true,
+  "test_case/test_01.py::locate_case::test_09": true,
+  "test_case/test_02.py::Test::test_08": true,
+  "test_case/test_02.py::Test::test_09": true,
+  "test_case/test_02.py::Test::test_10": true,
+  "test_case/test_02.py::Test::test_11": true
+}

@@ -14,5 +14,5 @@ resetKeyboard: True
 ip: 127.0.0.1
 port: 4723
 
-#environment: 酒小二
-environment: 叫酒开发
+environment: 酒小二
+#environment: 叫酒开发

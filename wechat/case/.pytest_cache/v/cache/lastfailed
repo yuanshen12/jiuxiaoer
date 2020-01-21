@@ -1,4 +1,6 @@
 {
+  "test01.py::TestCase": true,
+  "test01.py::TestLcation": true,
   "test01.py::TestLcation::test_01": true,
   "test01.py::TestLcation::test_02": true
 }

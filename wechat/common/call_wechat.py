@@ -1,4 +1,7 @@
 from appium import webdriver
+from wechat.element.call_element import Element
+from time import sleep
+import uiautomator2
 import yaml
 import os
 
@@ -21,14 +24,23 @@ def wechat():
         wechat['resetKeyboard'] = data['resetKeyboard']
         driver = webdriver.Remote('http://' + str(data['ip']) + ':' + str(data['port']) + '/wd/hub', wechat)
         driver.implicitly_wait(20)
-        choose = data['environment']
-        if choose == '酒小二':
-            driver.find_element_by_android_uiautomator('text(\"{}\")'.format(choose)).click()
-            driver.find_element_by_android_uiautomator('text(\"我要喝酒\")').click()
-        elif choose == '叫酒开发':
-            driver.find_element_by_android_uiautomator('text(\"{}\")'.format(choose)).click()
-            driver.find_element_by_android_uiautomator('textContains(\"测试商城\")').click()
-    return driver
+        choose = data["choose"]
+        if choose == 0:  # 进入微商城
+            environment = data['environment']
+            if environment == '酒小二':
+                driver.find_element_by_android_uiautomator('text(\"{}\")'.format(environment)).click()
+                driver.find_element_by_android_uiautomator('text(\"我要喝酒\")').click()
+            elif environment == '叫酒开发':
+                driver.find_element_by_android_uiautomator('text(\"{}\")'.format(environment)).click()
+                driver.find_element_by_android_uiautomator('textContains(\"测试商城\")').click()
+        elif choose == 1:  # 进入app
+            try:
+                driver.find_element_by_android_uiautomator('text(\"葡萄酒\")')
+            except:
+                driver.find_element_by_id("com.callme.mall:id/btn0").click()
+                driver.find_element_by_android_uiautomator('text(\"南宁\")').click()
+        elif choose == 2:  # 进入小程序
+            pass
 
 
 if __name__ == '__main__':

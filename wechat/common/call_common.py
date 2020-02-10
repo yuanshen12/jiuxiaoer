@@ -2,6 +2,8 @@ from selenium.webdriver.common.by import By
 from wechat.common.call_wechat import wechat
 from wechat.element.call_element import Element
 from time import sleep
+import yaml
+import os
 
 
 #  登录并进入到微商城首页
@@ -11,6 +13,19 @@ class Login(Element):
     manuslly_choose = (By.XPATH, "//*[contains(text(), '手动选择站点')]")
     confirm = (By.XPATH, "//*[contains(text(), '确认')]")
     advertising = (By.ID, "newCloseBtn")
+
+    def __init__(self, driver):
+        super().__init__(driver)
+        path = os.path.normpath(os.path.join(os.path.abspath(__file__), '..', '..'))
+        file = open("{}\\confing\\wechat.yaml".format(path), "r", encoding="utf-8")
+        data = yaml.safe_load(file)
+        choose = data["environment"]
+        if choose == '酒小二':
+            driver.find_element_by_android_uiautomator('text(\"{}\")'.format(choose)).click()
+            driver.find_element_by_android_uiautomator('text(\"我要喝酒\")').click()
+        elif choose == '叫酒开发':
+            driver.find_element_by_android_uiautomator('text(\"{}\")'.format(choose)).click()
+            driver.find_element_by_android_uiautomator('textContains(\"测试商城\")').click()
 
     def time(self, sp):  # 隐式等待时间
         activity = self.driver.current_activity
@@ -49,5 +64,4 @@ class Login(Element):
 
 if __name__ == '__main__':
     driver = wechat()
-    l = Login(driver)
-    l.login()
+    Login(driver)

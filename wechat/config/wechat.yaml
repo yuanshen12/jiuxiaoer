@@ -17,8 +17,8 @@ environment: 酒小二
 #environment: 叫酒开发
 
 # 微商城，app，小程序只能释放其一。
-#appPackage: com.tencent.mm  # 酒小二微商城
-#appActivity: com.tencent.mm.ui.LauncherUI  # 酒小二微商城
+appPackage: com.tencent.mm  # 酒小二微商城
+appActivity: com.tencent.mm.ui.LauncherUI  # 酒小二微商城
 
-appPackage: com.callme.mall  # 酒小二app
-appActivity: com.callme.mall.wxy.function.wellcome.SplashActivity  # 酒小二app
+#appPackage: com.callme.mall  # 酒小二app
+#appActivity: com.callme.mall.wxy.function.wellcome.SplashActivity  # 酒小二app

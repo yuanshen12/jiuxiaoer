@@ -1,6 +1,4 @@
 from appium import webdriver
-from wechat.element.call_element import Element
-from time import sleep
 import uiautomator2
 import yaml
 import os
@@ -41,6 +39,7 @@ def wechat():
                 driver.find_element_by_android_uiautomator('text(\"南宁\")').click()
         elif choose == 2:  # 进入小程序
             pass
+        return driver
 
 
 if __name__ == '__main__':

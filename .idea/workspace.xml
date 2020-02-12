@@ -72,15 +72,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\python\untitled" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled" />
+      <recent name="C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat\operation\locate_page" />
+      <recent name="C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat\po" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat\operation" />
       <recent name="C:\Users\Administrator\PycharmProjects\jiuxiaoer\kyb_testProject\app" />
       <recent name="C:\Users\Administrator\PycharmProjects\jiuxiaoer" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled" />
-      <recent name="C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat\operation\locate_page" />
-      <recent name="C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat\po" />
     </key>
   </component>
   <component name="RunManager" selected="Python.call_locate_page">

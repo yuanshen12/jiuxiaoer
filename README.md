@@ -11,7 +11,13 @@
 5、业务模块(operation)\
 6、用例批量执行以及生成测试报告(run)
 
+## 微商城框架图
 
+<table>
+<tr>
+<td><img src="https://github.com/yuanshen12/jiuxiaoer/blob/master/wechat/img/call_me.png"/></td>
+</tr>
 
+</table>
 
 

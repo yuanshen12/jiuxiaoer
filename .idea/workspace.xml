@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a21768a7-2cdd-4eee-beea-0d878da84b26" name="Default Changelist" comment="Initial commit">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="c3a73b54-1cf9-440d-9e1f-ed759fe457e6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/qidian/qidian.py" beforeDir="false" afterPath="$PROJECT_DIR$/qidian/qidian.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,24 +31,6 @@
         <option value="https://github.com/yuanshen12/jiuxiaoer.git" />
       </set>
     </option>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../untitled/wechat_mall/test_case/test_01.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../untitled/wechat_test/businessView/scation.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../untitled/wechat_test/test_case/test_02.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../untitled/wechat_mall/test_case/test_02.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../untitled/wechat_mall/test_case/test_14.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../untitled/wechat_test/businessView/drink.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../untitled/wechat_mall/run_main.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../untitled/wechat_mall/test_case/test_05.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../untitled/wechat_test/businessView/switch.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../untitled/wechat_test/businessView/operation_web.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../untitled/APPTest/run_main.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../untitled/wechat_test/test_run/run.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../untitled/wechat_test/businessView/search.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../untitled/wechat_mall/test_case/test_03.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../untitled/wechat_test/common/myunit.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../untitled/wechat_test/businessView/me.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
@@ -151,27 +133,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="call_statend" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\Administrator\PycharmProjects\untitled\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wechat/common" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat\common\call_statend.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="call_wechat" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="jiuxiaoer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -236,7 +197,6 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.call_statend" />
       <item itemvalue="Python.test_pytest" />
       <item itemvalue="Python.call_common" />
       <item itemvalue="Python.call_locate_page (1)" />

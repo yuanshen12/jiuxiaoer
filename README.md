@@ -1,5 +1,7 @@
 # 酒小二自动化测试平台简介
 
+使用工具：python + appium + unitest || pytest
+
 微信商城\
 \
 1、用例集合(case)\
@@ -10,6 +12,6 @@
 6、用例批量执行以及生成测试报告(run)
 
 
-# call_port启用pytest执行以及生成allure报告
+# 
 
 

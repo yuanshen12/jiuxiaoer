@@ -2,133 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a21768a7-2cdd-4eee-beea-0d878da84b26" name="Default Changelist" comment="Initial commit">
-      <change beforePath="$PROJECT_DIR$/wechat_mall/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/.idea/wechat_mall.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/.pytest_cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/.pytest_cache/CACHEDIR.TAG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/.pytest_cache/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/.pytest_cache/v/cache/lastfailed" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/.pytest_cache/v/cache/nodeids" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/.pytest_cache/v/cache/stepwise" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/app/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/baseView/Login.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/baseView/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/baseView/baseView.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/Drink/Drink.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/Drink/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/Drink/open.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/Drink/switch_beer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/Drink/switch_foreign.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/Drink/switch_liquor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/Drink/switch_wine.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/Me/Me_five.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/Me/Me_four.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/Me/Me_three.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/Me/Me_to.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/Me/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/Me/personal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/activity.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/discover.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/indent.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/locate.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/slideshow.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/businessView/sousou.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/common/Login.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/common/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/common/comm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/common/common_fun.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/common/desired_caps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/common/mail.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/common/myunit.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/config/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/config/app_config.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/config/log.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/conftest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/data/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/data/accunt.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/logs/runlog.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/report/2019-08-12 17_39_07test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/report/2019-08-12 17_43_23test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/report/2019-08-12 18_03_07test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/report/2019-08-12 18_03_18test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/report/2019-08-13 09_03_00test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/report/2019-08-16 16_01_50test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/report/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/report/result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/run_main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/screenshots/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/.idea/test_case.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/.pytest_cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/.pytest_cache/CACHEDIR.TAG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/.pytest_cache/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/.pytest_cache/v/cache/lastfailed" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/.pytest_cache/v/cache/nodeids" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/.pytest_cache/v/cache/stepwise" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/test_01.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/test_02.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/test_03.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/test_04.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/test_05.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/test_06.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/test_07.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/test_08.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/test_09.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/test_10.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/test_11.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/test_12.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/test_13.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/test_14.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_mall/test_case/test_15.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/baseView/baseView.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/businessView/drink.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/businessView/indent.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/businessView/item.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/businessView/item_web.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/businessView/me.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/businessView/operation_web.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/businessView/reduced.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/businessView/reduced_web.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/businessView/scation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/businessView/search.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/businessView/service_web.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/businessView/switch.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/common/TMS.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/common/common_fun.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/common/desired_caps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/common/myunit.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/config/kyb_caps.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/config/log.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/data/account.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/logs/runlog.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/reports/2019-10-30 16_05_47 test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/reports/2019-11-01 14_54_11 test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/reports/2019-11-02 09_04_18 test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/reports/2019-11-02 09_12_30 test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/reports/2019-11-02 09_14_46 test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/reports/2019-11-02 10_54_43 test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/reports/2019-11-02 11_01_59 test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/reports/2019-11-04 09_06_39 test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/reports/2019-11-05 11_40_06 test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/reports/2019-11-06 10_46_21 test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/reports/2019-11-07 09_55_28 test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/reports/2019-11-08 14_07_25 test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/reports/2020-01-19 10_00_59 test_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/test_case/test_01.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/test_case/test_02.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/test_case/test_03.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/test_case/test_04.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/test_case/test_05.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/test_case/test_06.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/test_case/test_07.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat_test/test_run/run.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,15 +77,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat\operation\locate_page" />
-      <recent name="C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat\po" />
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat\operation" />
       <recent name="C:\Users\Administrator\PycharmProjects\jiuxiaoer\kyb_testProject\app" />
       <recent name="C:\Users\Administrator\PycharmProjects\jiuxiaoer" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled" />
+      <recent name="C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat\operation\locate_page" />
+      <recent name="C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat\po" />
     </key>
   </component>
   <component name="RunManager" selected="Python.call_locate_page">

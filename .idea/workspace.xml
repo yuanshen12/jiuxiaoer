@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a21768a7-2cdd-4eee-beea-0d878da84b26" name="Default Changelist" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/operation/locate_page/call_locate_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/operation/locate_page/call_locate_page.py" afterDir="false" />
-    </list>
+    <list default="true" id="a21768a7-2cdd-4eee-beea-0d878da84b26" name="Default Changelist" comment="Initial commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

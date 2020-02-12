@@ -15,7 +15,7 @@
 
 <table>
 <tr>
-<td><img src="https://github.com/yuanshen12/jiuxiaoer/blob/master/wechat/img/call_me.jpg"/></td>
+<td><img src="https://github.com/yuanshen12/jiuxiaoer/blob/master/wechat/img/call_me.png"/></td>
 </tr>
 
 </table>

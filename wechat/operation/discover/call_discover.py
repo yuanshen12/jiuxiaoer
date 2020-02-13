@@ -26,9 +26,6 @@ class Discover(Login):
         print(names.text)
 
 
-
-
-
 if __name__ == "__main__":
     driver = wechat()
     name = Discover(driver)

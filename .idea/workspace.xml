@@ -1,8 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a21768a7-2cdd-4eee-beea-0d878da84b26" name="Default Changelist" comment="Initial commit">
+    <list default="true" id="e6255496-0769-4780-b141-cc7c24e695ec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/wechat/operation/indent/call_indent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wechat/operation/me/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wechat/operation/me/call_me.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/config/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/config/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/hookspec.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/hookspec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/recwarn.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/recwarn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/appium/webdriver/extensions/android/performance.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/appium/webdriver/extensions/android/performance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/bs4/dammit.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/bs4/dammit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/bs4/tests/test_soup.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/bs4/tests/test_soup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/importlib_metadata/tests/test_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/importlib_metadata/tests/test_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_internal/req/req_install.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_internal/req/req_install.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_internal/utils/glibc.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_internal/utils/glibc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/html5lib/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/html5lib/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/html5lib/html5parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/html5lib/html5parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/pyparsing.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/pyparsing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/urllib3/contrib/securetransport.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/urllib3/contrib/securetransport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pymysql/connections.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pymysql/connections.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pyparsing.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pyparsing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sqlmap/lib/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/sqlmap/lib/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sqlmap/plugins/dbms/mysql/takeover.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/sqlmap/plugins/dbms/mysql/takeover.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sqlmap/thirdparty/bottle/bottle.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/sqlmap/thirdparty/bottle/bottle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sqlmap/thirdparty/clientform/clientform.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/sqlmap/thirdparty/clientform/clientform.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sqlmap/thirdparty/pydes/pyDes.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/sqlmap/thirdparty/pydes/pyDes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/contrib/securetransport.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/contrib/securetransport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat/operation/discover/call_discover.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/operation/discover/call_discover.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat/operation/my/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/operation/drink_immediately/call_drink.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,8 +114,8 @@
       <recent name="C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat\po" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.call_locate_page">
-    <configuration name="call_common" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.call_discover">
+    <configuration name="call_discover" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="jiuxiaoer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -96,11 +123,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wechat/common" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wechat/operation/discover" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wechat/common/call_common.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wechat/operation/discover/call_discover.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -143,27 +170,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wechat/operation/locate_page/call_locate_page.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="call_statend" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\Administrator\PycharmProjects\untitled\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wechat/common" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat\common\call_statend.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -236,21 +242,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.call_statend" />
       <item itemvalue="Python.test_pytest" />
-      <item itemvalue="Python.call_common" />
       <item itemvalue="Python.call_locate_page (1)" />
       <item itemvalue="Python.call_locate_page" />
       <item itemvalue="Python.call_wechat" />
       <item itemvalue="Python.test01" />
+      <item itemvalue="Python.call_discover" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.call_discover" />
         <item itemvalue="Python.call_locate_page" />
         <item itemvalue="Python.test01" />
         <item itemvalue="Python.call_locate_page (1)" />
         <item itemvalue="Python.call_wechat" />
-        <item itemvalue="Python.call_common" />
       </list>
     </recent_temporary>
   </component>
@@ -375,22 +380,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="654" y="258" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577932616824" />
-    <state width="943" height="254" key="GridCell.Tab.0.bottom" timestamp="1581502102293">
+    <state width="943" height="254" key="GridCell.Tab.0.bottom" timestamp="1581582629570">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="943" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581502102293" />
-    <state width="943" height="254" key="GridCell.Tab.0.center" timestamp="1581502102293">
+    <state width="943" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581582629570" />
+    <state width="943" height="254" key="GridCell.Tab.0.center" timestamp="1581582629569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="943" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581502102293" />
-    <state width="943" height="254" key="GridCell.Tab.0.left" timestamp="1581502102291">
+    <state width="943" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581582629569" />
+    <state width="943" height="254" key="GridCell.Tab.0.left" timestamp="1581582629569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="943" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581502102291" />
-    <state width="943" height="254" key="GridCell.Tab.0.right" timestamp="1581502102293">
+    <state width="943" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581582629569" />
+    <state width="943" height="254" key="GridCell.Tab.0.right" timestamp="1581582629570">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="943" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581502102293" />
+    <state width="943" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581582629570" />
     <state width="1899" height="223" key="GridCell.Tab.1.bottom" timestamp="1581415275844">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

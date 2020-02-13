@@ -11,6 +11,8 @@
 5、业务模块\
 6、用例批量执行以及生成测试报告
 
+>[框架原型图](https://github.com/yuanshen12/jiuxiaoer/blob/master/wechat/img/call_me.jpg)
+
 ## 微商城框架图
 
 <table>

@@ -1,18 +1,17 @@
 from selenium.webdriver.common.by import By
-from wechat.common.call_wechat import wechat
-from wechat.element.call_element import Element
+from common.call_wechat import wechat
+from element.call_element import Element
 from time import sleep
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 
 #  登录并进入到微商城首页
-# noinspection PyBroadException
 class Login(Element):
     determine = (By.CLASS_NAME, 'android.widget.Button')  # 地理位置授权
-    manuslly_choose = (By.XPATH, "//*[contains(text(), '手动选择站点')]")
-    confirm = (By.XPATH, "//*[contains(text(), '确认')]")
-    advertising = (By.ID, "newCloseBtn")
+    manuslly_choose = (By.XPATH, "//*[contains(text(), '手动选择站点')]")  # 手动选择站点
+    confirm = (By.XPATH, "//*[contains(text(), '确认')]")  # 确认选择地址
+    advertising = (By.ID, "newCloseBtn")  # 点击取消弹屏广告
 
     def wait(self, choose, display):  # 显示等待
         wait = WebDriverWait(self.driver, 20, 0.3).until(choose(display))
@@ -48,5 +47,5 @@ class Login(Element):
 
 if __name__ == '__main__':
     driver = wechat()
-    l = Login(driver)
-    l.login()
+    name = Login(driver)
+    name.login()

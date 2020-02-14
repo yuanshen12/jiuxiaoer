@@ -1,5 +1,5 @@
 import pytest,unittest
-from wechat.common.call_wechat import wechat
+from common.call_wechat import wechat
 
 #  启动微信并调用unittest
 

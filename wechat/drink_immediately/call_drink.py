@@ -1,8 +1,8 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from wechat.common.call_common import Login
-from wechat.common.call_wechat import wechat
-from wechat.operation.home.call_home import Home
+from common.call_common import Login
+from common.call_wechat import wechat
+from wechat.home.call_home import Home
 from selenium.webdriver.common.touch_actions import TouchActions
 
 
@@ -42,4 +42,4 @@ class Drink(Login):
 if __name__ == "__main__":
     driver = wechat()
     name = Drink(driver)
-    name.drink_mix()
+    name.drink_parent()

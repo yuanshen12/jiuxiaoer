@@ -1,8 +1,8 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from wechat.common.call_wechat import wechat
-from wechat.common.call_common import Login
-from wechat.operation.home.call_home import Home
+from common.call_wechat import wechat
+from common.call_common import Login
+from wechat.home.call_home import Home
 
 
 class Indent(Login):

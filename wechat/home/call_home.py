@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from wechat.common.call_common import Login
-from wechat.common.call_wechat import wechat
+from common.call_common import Login
+from common.call_wechat import wechat
 
 
 class Home(Login):

@@ -1,6 +1,5 @@
 from wechat.common.call_statend import TestCase
-from wechat.common.call_common import Login
-from wechat.operation.locate_page.call_locate_page import Locate
+from wechat.locate_page import Locate
 import pytest
 
 

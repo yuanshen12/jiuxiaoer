@@ -7,7 +7,7 @@ from common.call_wechat import wechat
 class Home(Login):
     call_locate = (By.ID, "cityName")  # 定位
     call_search = (By.CLASS_NAME, "h-search")  # 搜索
-    call_carousel = (By.XPATH, "/html/body/section[1]/article[3]/ul/li[1]")  # 轮播图
+    call_carousel = (By.XPATH, "/html/body/section[1]/article[3]/ul/li[{}]")  # 轮播图
     call_handpick = (By.CLASS_NAME, 'a')  # 啤酒(精选列表0,1,2,3,4,5,6,7）
     call_activity = (By.CLASS_NAME, "hotarea-link")  # 活动及楼层（0,1,2,3,4,5,6）
     call_menu = (By.CLASS_NAME, "nav-item")  # 底部菜单栏（0,1,2,3,4）
@@ -19,21 +19,27 @@ class Home(Login):
     call_tag = (By.CLASS_NAME, "goods-price")  # 首页商品价格标签（0,1,2……）
     call_about = (By.CLASS_NAME, "about")  # 首页进入关于酒小二
 
+    def __init__(self, driver):
+        super().__init__(driver)
+        self.login()
+
     def home_location(self):  # 首页打开定位
         self.wait(EC.element_to_be_clickable, self.call_locate).click()
 
     def home_search(self):  # 首页打开搜索
         self.wait(EC.element_to_be_clickable, self.call_search).click()
 
-    def home_carousel(self):  # 首页打开轮播图
+    def home_carousel(self, num=1):  # 首页打开轮播图(1,2……）
         while True:
-            self.swipe(840, 540, 200, 540, 500)
             try:
-                self.wait(EC.element_to_be_clickable, self.call_carousel).click()
+                one = self.call_carousel
+                two = one[1].format(num)
+                three = (one[0],) + (two,)
+                self.swipe(840, 540, 200, 540, 500)
+                self.wait(EC.element_to_be_clickable, three).click()
+                break
             except:
                 pass
-            else:
-                break
 
     def home_handpick(self, num):  # 精选列表（0,1,2,3,4,5,6,7,8）
         self.wait(EC.presence_of_all_elements_located, self.call_handpick)[num].click()
@@ -43,10 +49,9 @@ class Home(Login):
             try:
                 self.swipe(600, 1000, 600, 600, 500)
                 self.wait(EC.presence_of_all_elements_located, self.call_activity)[num].click()
+                break
             except:
                 pass
-            else:
-                break
 
     def home_cart(self):  # 首页点进购物车
         self.wait(EC.presence_of_element_located, self.call_cart).click()
@@ -55,25 +60,22 @@ class Home(Login):
         self.wait(EC.presence_of_all_elements_located, self.call_menu)[num].click()
 
     def home_more(self, num):  # 首页查看更多（0,1,2,3）
-        self.login()
         while True:
             try:
                 self.swipe(600, 1000, 600, 600, 500)
                 self.wait(EC.presence_of_all_elements_located, self.call_more)[num].click()
+                break
             except:
                 pass
-            else:
-                break
 
     def home_shopping(self, num):  # 首页点开抽屉（0,1,2,……）
         while True:
             try:
                 self.swipe(600, 1000, 600, 600, 500)
                 self.wait(EC.presence_of_all_elements_located, self.call_shopping)[num].click()
+                break
             except:
                 pass
-            else:
-                break
 
     def home_img(self, num):  # 首页商品图片（0,1,2……）
         while True:
@@ -95,7 +97,7 @@ class Home(Login):
             else:
                 break
 
-    def home_tag(self, num):
+    def home_tag(self, num):  # 首页商品价格标签
         while True:
             try:
                 self.swipe(600, 1000, 600, 600, 500)
@@ -106,8 +108,7 @@ class Home(Login):
                 break
         return text
 
-    def home_about(self):
-        self.login()
+    def home_about(self):  # 首页底部帮助中心
         while True:
             try:
                 self.swipe(600, 1000, 600, 600, 500)
@@ -121,4 +122,4 @@ class Home(Login):
 if __name__ == "__main__":
     driver = wechat()
     H = Home(driver)
-    H.home_menu(3)
+    H.home_about()

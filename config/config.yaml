@@ -13,8 +13,8 @@ port: 4723
 
 choose: 0  # 0、执行微商城。1、执行app。2、执行小程序
 
-environment: 酒小二
-#environment: 叫酒开发
+#environment: 酒小二
+environment: 叫酒开发
 
 # 微商城，app，小程序只能释放其一。
 appPackage: com.tencent.mm  # 酒小二微商城

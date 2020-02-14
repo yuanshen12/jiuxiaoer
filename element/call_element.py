@@ -11,5 +11,5 @@ class Element(object):
     def get_window_size(self):
         return self.driver.get_window_size()
 
-    def swipe(self, start_x, start_y, end_x, end_y, duration):  # duration显示滑动时间，毫秒
+    def swipe(self, start_x, start_y, end_x, end_y, duration):  # duration定义滑动时间参数，毫秒单位
         return self.driver.swipe(start_x, start_y, end_x, end_y, duration)

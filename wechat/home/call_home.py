@@ -121,4 +121,4 @@ class Home(Login):
 if __name__ == "__main__":
     driver = wechat()
     H = Home(driver)
-    H.home_about()
+    H.home_menu(3)

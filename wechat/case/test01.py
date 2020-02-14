@@ -1,17 +1,17 @@
-from wechat.common.call_statend import TestCase
-from wechat.common.call_common import Login
-from wechat.operation.locate_page.call_locate_page import Locate
+from common.call_statend import TestCase
+from wechat.home.call_home import Home
 import pytest
 
 
 class TestLcation(TestCase):
 
     def test_01(self):
-        num = Locate(self.driver)
-        num.call_use_locate()
-        num.call_locate(0)
-        h = "hello!"
-        assert 'h' not in h
+        num = Home(self.driver)
+        try:
+            name = num.home_about()
+        except:
+            return False
+        assert name == "123"
 
     def test_02(self):
         y = 123

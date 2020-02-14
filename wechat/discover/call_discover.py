@@ -16,16 +16,17 @@ class Discover(Login):
     call_side = (By.CLASS_NAME, "middle-body")  # 发现页面商品反转点击
     call_cart = (By.CLASS_NAME, "float_cart")  # 发现页面点开购物车
 
-    def discover_title(self, num):  # 发现页面选择标题栏
+    def __init__(self, driver):
+        super().__init__(driver)
         self.login()
         Home(driver).home_menu(1)
+
+    def discover_title(self, num):  # 发现页面选择标题栏
         age = self.wait(EC.presence_of_all_elements_located, self.call_header)[num]
         TouchActions(self.driver).tap(age).perform()
 
     # 发现页面点击或者返回（stat选择打开位置，img点开图片，title点开标题,sub点开小标题,price返回价格）
     def discover_item(self, stat=0, img=0, title=1, sub=0, price=0):
-        self.login()
-        Home(driver).home_menu(1)
         if stat == 0:  # 选择点击图片
             while True:
                 try:
@@ -71,4 +72,4 @@ class Discover(Login):
 if __name__ == "__main__":
     driver = wechat()
     name = Discover(driver)
-    name.discover_cart()
+    name.discover_item(2)

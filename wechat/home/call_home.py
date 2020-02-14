@@ -32,11 +32,8 @@ class Home(Login):
     def home_carousel(self, num=1):  # 首页打开轮播图(1,2……）
         while True:
             try:
-                one = self.call_carousel
-                two = one[1].format(num)
-                three = (one[0],) + (two,)
                 self.swipe(840, 540, 200, 540, 500)
-                self.wait(EC.element_to_be_clickable, three).click()
+                self.wait(EC.element_to_be_clickable, self.amend(self.call_carousel, num)).click()
                 break
             except:
                 pass
@@ -122,4 +119,4 @@ class Home(Login):
 if __name__ == "__main__":
     driver = wechat()
     H = Home(driver)
-    H.home_about()
+    H.home_carousel()

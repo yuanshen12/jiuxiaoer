@@ -43,6 +43,11 @@ class Locate(Login):
     call_add_item = (By.CLASS_NAME, "item")  # 定位页面新增地址标签
     call_add_save = (By.CLASS_NAME, "sumbit-btn")  # 定位页面新增地址保存
 
+    def __init__(self, driver):
+        super().__init__(driver)
+        self.login()
+        Home(driver).home_location()
+
     # 定位页面操作
     def locate_address(self):  # 定位页面选择区域(0,1,2,3……）
         self.wait(EC.element_to_be_clickable, self.call_address).click()
@@ -76,8 +81,6 @@ class Locate(Login):
 
     #  定位页面点开新增地址（name姓名，phone手机号，tablet门牌默认为空，item默认0为家，sex默认0为男）
     def locate_add(self, name=(), phone=(), tablet=(), item=0, sex=0):
-        self.login()
-        Home(driver).home_location()
         while True:
             try:
                 self.swipe(600, 1000, 600, 600, 500)
@@ -99,8 +102,6 @@ class Locate(Login):
         self.wait(EC.element_to_be_clickable, self.call_add_save).click()
 
     def locate_locate(self, num):  # 定位页面选择附近地址（1,2,3……）
-        self.login()
-        Home(driver).home_location()
         while True:
             try:
                 self.swipe(600, 1000, 600, 600, 500)
@@ -188,4 +189,4 @@ class Locate(Login):
 if __name__ == '__main__':
     driver = wechat()
     PI = Locate(driver)
-    PI.locate_add(name="酒小二测试", phone=13558252700, tablet="酒小二", item=2, sex=1)
+    PI.locate_locate(1)

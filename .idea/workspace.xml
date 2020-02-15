@@ -235,12 +235,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.test_pytest" />
       <item itemvalue="Python.call_drink" />
-      <item itemvalue="Python.run" />
       <item itemvalue="Python.call_run" />
-      <item itemvalue="Python.test01" />
       <item itemvalue="Python.run (1)" />
+      <item itemvalue="Python.run" />
+      <item itemvalue="Python.test01" />
+      <item itemvalue="Python.test_pytest" />
     </list>
     <recent_temporary>
       <list>

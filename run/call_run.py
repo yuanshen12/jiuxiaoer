@@ -8,7 +8,7 @@ report = os.path.abspath('../report')
 print(case, report)
 sys.path.append(case)
 
-discover = unittest.defaultTestLoader.discover(case, pattern="test01.py")
+discover = unittest.defaultTestLoader.discover(case, pattern="test_01.py")
 
 now = time.strftime("%Y-%m-%d")
 report_name = report + '/' + now + 'report.html'

@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6255496-0769-4780-b141-cc7c24e695ec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/report/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/call_run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jiuxiaoer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jiuxiaoer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/report/xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/call_me.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/call_port/allure-report/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/call_port/report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-02-14report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/call_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run/call_run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat/case/.pytest_cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat/case/.pytest_cache/CACHEDIR.TAG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat/case/.pytest_cache/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat/case/.pytest_cache/v/cache/lastfailed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat/case/.pytest_cache/v/cache/nodeids" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat/case/.pytest_cache/v/cache/stepwise" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat/case/test01.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/case/test_01.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +107,7 @@
       <recent name="C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat\operation" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.call_run">
+  <component name="RunManager" selected="Python.run (1)">
     <configuration name="call_drink" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="jiuxiaoer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -119,27 +129,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="call_home" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="jiuxiaoer" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wechat/home" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wechat/home/call_home.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="call_run" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="jiuxiaoer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -153,6 +142,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run/call_run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="jiuxiaoer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -194,7 +204,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wechat/case/test01.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat\case\test_01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -226,19 +236,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.test_pytest" />
-      <item itemvalue="Python.call_home" />
       <item itemvalue="Python.call_drink" />
       <item itemvalue="Python.run" />
       <item itemvalue="Python.call_run" />
       <item itemvalue="Python.test01" />
+      <item itemvalue="Python.run (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.run (1)" />
         <item itemvalue="Python.call_run" />
         <item itemvalue="Python.run" />
         <item itemvalue="Python.test01" />
         <item itemvalue="Python.call_drink" />
-        <item itemvalue="Python.call_home" />
       </list>
     </recent_temporary>
   </component>
@@ -327,10 +337,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577266321164" />
-    <state x="713" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581586083365">
+    <state x="713" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581755239118">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="713" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581586083365" />
+    <state x="713" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581755239118" />
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579426321487">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -363,22 +373,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="654" y="258" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577932616824" />
-    <state width="1899" height="254" key="GridCell.Tab.0.bottom" timestamp="1581674896330">
+    <state width="1899" height="254" key="GridCell.Tab.0.bottom" timestamp="1581755262817">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581674896330" />
-    <state width="1899" height="254" key="GridCell.Tab.0.center" timestamp="1581674896330">
+    <state width="1899" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581755262817" />
+    <state width="1899" height="254" key="GridCell.Tab.0.center" timestamp="1581755262817">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581674896330" />
-    <state width="1899" height="254" key="GridCell.Tab.0.left" timestamp="1581674896330">
+    <state width="1899" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581755262817" />
+    <state width="1899" height="254" key="GridCell.Tab.0.left" timestamp="1581755262817">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581674896330" />
-    <state width="1899" height="254" key="GridCell.Tab.0.right" timestamp="1581674896330">
+    <state width="1899" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581755262817" />
+    <state width="1899" height="254" key="GridCell.Tab.0.right" timestamp="1581755262817">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581674896330" />
+    <state width="1899" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581755262817" />
     <state width="1899" height="223" key="GridCell.Tab.1.bottom" timestamp="1581673909861">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

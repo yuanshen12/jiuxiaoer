@@ -1,0 +1,26 @@
+{
+  "total" : 2,
+  "items" : [ {
+    "uid" : "d3c7add76dcd0be8888916dc4a184999",
+    "name" : "wechat.case",
+    "statistic" : {
+      "failed" : 2,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "d7201c6b755ae744affbf4a948f50392",
+    "name" : "call_port",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 6,
+      "unknown" : 0,
+      "total" : 9
+    }
+  } ]
+}

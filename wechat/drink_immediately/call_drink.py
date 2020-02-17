@@ -11,10 +11,8 @@ class Drink(Login):
     call_mix = (By.CLASS_NAME, "mix-parent")  # 马上喝页面标题
     call_parent = (By.XPATH, "/html/body/nav[2]/ul/li[1]/ul/li[{}]")  # 马上喝酒类选择
     call_rank = (By.XPATH, "/html/body/nav[2]/ul/li[2]/ul/li[{}]")  # 马上喝综合排序的排序
-    call_screen_attrib = (By.XPATH, "//*[@id='-2']/aside[2]/div[{}]")  # 马上喝页面筛选的品牌选择
-    call_screen_price = (By.XPATH, "//*[@id='-1']/aside[2]/div[{}]")  # 马上喝筛选的价格选择
-    call_screen_class = (By.XPATH, "//*[@id='58']/aside[2]/div[{}]")  # 马上喝筛选的类型选择
-    call_screen_place = (By.XPATH, "//*[@id='47']/aside[2]/div[{}]")  # 马上喝筛选的产地选择
+    call_screen = (By.XPATH, "//*[@id='doc-mix-offcanvas']/aside[1]/div/article[{}]/aside[2]/div[{}]")  # 马上喝页面筛选的品牌选择
+    call_ensure = (By.CLASS_NAME, "mix-u-sm-6")  # 马上喝页面筛选的确定和重置
     call_search = (By.CLASS_NAME, "search-btn")  # 马上喝页面搜索功能
     call_item = (By.CLASS_NAME, "tab-item")  # 马上喝页面全部，促销，等按钮
     call_tab = (By.CLASS_NAME, "tab-search")  # 马上喝页面点开全部按钮
@@ -41,37 +39,29 @@ class Drink(Login):
         self.drink_mix(1)
         self.wait(EC.presence_of_element_located, self.amend(self.call_rank, num)).click()
 
-    def drink_screen(self, stat=0, num=2):  # 马上喝筛选的品牌（2,3……）
-        if stat == 0:
-            self.drink_mix(2)
-            self.wait(EC.element_to_be_clickable, self.amend(self.call_screen_attrib, num)).click()
-        elif stat == 1:
-            self.drink_mix(2)
-            self.wait(EC.element_to_be_clickable, self.amend(self.call_screen_price, num)).click()
-        elif stat == 2:
-            self.drink_mix(2)
-            while True:
-                try:
-                    self.swipe(600, 1200, 600, 600, 500)
-                    self.wait(EC.element_to_be_clickable, self.amend(self.call_screen_class, num)).click()
-                except:
-                    pass
-                else:
-                    break
-        else:
-            if stat == 3:
-                self.drink_mix(2)
-                while True:
-                    try:
-                        self.swipe(600, 1200, 600, 600, 500)
-                        self.wait(EC.element_to_be_clickable, self.amend(self.call_screen_place, num)).click()
-                    except:
-                        pass
-                    else:
-                        break
+    def drink_screen(self, stat=1,  three=2):  # 马上喝筛选（stat选择类型1品牌，2价格，three选择第几个）
+        self.drink_mix(2)
+        while True:
+            try:
+                self.wait(EC.element_to_be_clickable, self.amends(self.call_screen, stat, three)).click()
+            except:
+                self.swipe(600, 1200, 600, 600, 500)
+                continue
+            else:
+                break
+
+    def drink_ensure(self, num=0):  # 马上喝筛选页面的重置和确定
+        self.drink_screen()
+        self.wait(EC.presence_of_all_elements_located, self.call_ensure)[num].click()
+
+    def drink_search(self):  # 马上喝页面点开搜索
+        self.wait(EC.element_to_be_clickable, self.call_search).click()
+
+    def drink_item(self, num):  # 马上喝页面促销
+        self.wait(EC.presence_of_all_elements_located, self.call_item)[num].click()
 
 
 if __name__ == "__main__":
     driver = wechat()
     name = Drink(driver)
-    name.drink_screen(stat=3)
+    name.drink_item(1)

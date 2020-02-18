@@ -19,7 +19,7 @@ class Drink(Login):
     call_img = (By.CLASS_NAME, "img")  # 马上喝页面商品图片
     call_title = (By.CLASS_NAME, "goods-title")  # 马上喝页面商品标题
     call_price = (By.CLASS_NAME, "goods-price")  # 马上喝页面商品价格
-    call_add = (By.CLASS_NAME, "cart-add")  # 马上喝页面商品加号
+    call_add = (By.CLASS_NAME, "j-modal-open")  # 马上喝页面商品加号
     call_cart = (By.CLASS_NAME, "icon-shopping_cart")  # 马上喝页面购物车
     call_content = (By.CLASS_NAME, "content-right")  # 马上喝页面去结算
 
@@ -39,7 +39,7 @@ class Drink(Login):
         self.drink_mix(1)
         self.wait(EC.presence_of_element_located, self.amend(self.call_rank, num)).click()
 
-    def drink_screen(self, stat=1,  three=2):  # 马上喝筛选（stat选择类型1品牌，2价格，three选择第几个）
+    def drink_screen(self, stat=1, three=2):  # 马上喝筛选（stat选择类型1品牌，2价格，three选择第几个）
         self.drink_mix(2)
         while True:
             try:
@@ -60,8 +60,55 @@ class Drink(Login):
     def drink_item(self, num):  # 马上喝页面促销
         self.wait(EC.presence_of_all_elements_located, self.call_item)[num].click()
 
+    def drink_tab(self):  # 马上喝页面促销点开全部
+        self.wait(EC.element_to_be_clickable, self.call_tab).click()
+
+    def drink_img(self, num):  # 马上喝页面点开商品详情图片
+        while True:
+            try:
+                sleep(2)
+                self.wait(EC.presence_of_all_elements_located, self.call_img)[num].click()
+                break
+            except:
+                self.swipe(600, 1200, 600, 600, 500)
+                continue
+
+    def drink_title(self, num):  # 马上喝页面标题
+        while True:
+            try:
+                sleep(2)
+                self.wait(EC.visibility_of_all_elements_located, self.call_title)[num].click()
+                break
+            except:
+                self.swipe(600, 1200, 600, 600, 500)
+
+    def drink_price(self, num):  # 马上喝页面商品价格
+        while True:
+            try:
+                sleep(2)
+                price = self.wait(EC.presence_of_all_elements_located, self.call_price)[num].text
+                break
+            except:
+                self.swipe(600, 1200, 600, 600, 500)
+        return price
+
+    def drink_add(self, num):  # 马上喝点加打开抽屉
+        while True:
+            try:
+                sleep(2)
+                self.wait(EC.presence_of_all_elements_located, self.call_add)[num].click()
+                break
+            except:
+                self.swipe(600, 1200, 600, 600, 500)
+
+    def drink_cart(self):  # 马上喝点购物车
+        self.wait(EC.element_to_be_clickable, self.call_cart).click()
+
+    def drink_content(self):  # 马上喝点去结算
+        self.wait(EC.element_to_be_clickable, self.call_content).click()
+
 
 if __name__ == "__main__":
     driver = wechat()
     name = Drink(driver)
-    name.drink_item(1)
+    name.drink_content()

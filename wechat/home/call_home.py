@@ -65,7 +65,6 @@ class Home(Login):
             except:
                 continue
 
-
     def home_shopping(self, num):  # 首页点开抽屉（0,1,2,……）
         while True:
             try:

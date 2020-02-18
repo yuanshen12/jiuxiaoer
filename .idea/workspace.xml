@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa5db4c-b260-4fcf-879f-f7e6af4b42ec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/apk/call_home/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apk/call_home/test_home.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/element/call_element.py" beforeDir="false" afterPath="$PROJECT_DIR$/element/call_element.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wechat/drink_immediately/call_drink.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/drink_immediately/call_drink.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wechat/home/call_home.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/home/call_home.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/locate_page/call_locate_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/locate_page/call_locate_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat/indent/call_indent.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/indent/call_indent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat/me/call_me.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/me/call_me.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,28 +100,7 @@
       <recent name="C:\Users\Administrator\PycharmProjects\jiuxiaoer\wechat\operation" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.call_drink">
-    <configuration name="call_discover" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="jiuxiaoer" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wechat/discover" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wechat/discover/call_discover.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.call_wechat">
     <configuration name="call_drink" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="jiuxiaoer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,7 +143,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="call_locate_page" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="call_indent" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="jiuxiaoer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -169,11 +151,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wechat/locate_page" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wechat/indent" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wechat/locate_page/call_locate_page.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wechat/indent/call_indent.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -182,7 +164,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_01" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="call_me" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="jiuxiaoer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -190,11 +172,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wechat/case" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wechat/me" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wechat/case/test_01.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wechat/me/call_me.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="call_wechat" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="jiuxiaoer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/call_wechat.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -226,19 +229,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.test_pytest" />
-      <item itemvalue="Python.test_01" />
       <item itemvalue="Python.call_home" />
-      <item itemvalue="Python.call_discover" />
       <item itemvalue="Python.call_drink" />
-      <item itemvalue="Python.call_locate_page" />
+      <item itemvalue="Python.call_indent" />
+      <item itemvalue="Python.call_me" />
+      <item itemvalue="Python.call_wechat" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.call_wechat" />
+        <item itemvalue="Python.call_me" />
+        <item itemvalue="Python.call_indent" />
         <item itemvalue="Python.call_drink" />
         <item itemvalue="Python.call_home" />
-        <item itemvalue="Python.call_locate_page" />
-        <item itemvalue="Python.call_discover" />
-        <item itemvalue="Python.test_01" />
       </list>
     </recent_temporary>
   </component>
@@ -363,22 +366,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="654" y="258" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577932616824" />
-    <state width="1899" height="223" key="GridCell.Tab.0.bottom" timestamp="1581934053476">
+    <state width="1899" height="254" key="GridCell.Tab.0.bottom" timestamp="1582018302374">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="223" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581934053476" />
-    <state width="1899" height="223" key="GridCell.Tab.0.center" timestamp="1581934053476">
+    <state width="1899" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582018302374" />
+    <state width="1899" height="254" key="GridCell.Tab.0.center" timestamp="1582018302374">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="223" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581934053476" />
-    <state width="1899" height="223" key="GridCell.Tab.0.left" timestamp="1581934053475">
+    <state width="1899" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582018302374" />
+    <state width="1899" height="254" key="GridCell.Tab.0.left" timestamp="1582018302374">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="223" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581934053475" />
-    <state width="1899" height="223" key="GridCell.Tab.0.right" timestamp="1581934053476">
+    <state width="1899" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582018302374" />
+    <state width="1899" height="254" key="GridCell.Tab.0.right" timestamp="1582018302374">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="223" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581934053476" />
+    <state width="1899" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582018302374" />
     <state width="1899" height="223" key="GridCell.Tab.1.bottom" timestamp="1581934053477">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -423,10 +426,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="723" y="414" key="git4idea.ui.GitResetDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579423714518" />
-    <state x="621" y="250" width="672" height="678" key="search.everywhere.popup" timestamp="1581493331502">
+    <state x="621" y="250" width="672" height="678" key="search.everywhere.popup" timestamp="1582007239552">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="621" y="250" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581493331502" />
+    <state x="621" y="250" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582007239552" />
     <state x="836" y="314" key="svn.repositoryBrowser" timestamp="1577935144446">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

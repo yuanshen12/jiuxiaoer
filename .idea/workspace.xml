@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa5db4c-b260-4fcf-879f-f7e6af4b42ec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apk/call_home/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apk/call_home/test_home.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/drink_immediately/call_drink.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/drink_immediately/call_drink.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/home/call_home.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/home/call_home.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/indent/call_indent.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/indent/call_indent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/me/call_me.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/me/call_me.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,12 +221,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.test_pytest" />
-      <item itemvalue="Python.call_home" />
       <item itemvalue="Python.call_drink" />
+      <item itemvalue="Python.call_home" />
       <item itemvalue="Python.call_indent" />
       <item itemvalue="Python.call_me" />
       <item itemvalue="Python.call_wechat" />
+      <item itemvalue="Python.test_pytest" />
     </list>
     <recent_temporary>
       <list>
@@ -366,22 +359,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="654" y="258" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577932616824" />
-    <state width="1899" height="254" key="GridCell.Tab.0.bottom" timestamp="1582018302374">
+    <state width="1899" height="254" key="GridCell.Tab.0.bottom" timestamp="1582020176635">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582018302374" />
-    <state width="1899" height="254" key="GridCell.Tab.0.center" timestamp="1582018302374">
+    <state width="1899" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582020176635" />
+    <state width="1899" height="254" key="GridCell.Tab.0.center" timestamp="1582020176635">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582018302374" />
-    <state width="1899" height="254" key="GridCell.Tab.0.left" timestamp="1582018302374">
+    <state width="1899" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582020176635" />
+    <state width="1899" height="254" key="GridCell.Tab.0.left" timestamp="1582020176635">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582018302374" />
-    <state width="1899" height="254" key="GridCell.Tab.0.right" timestamp="1582018302374">
+    <state width="1899" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582020176635" />
+    <state width="1899" height="254" key="GridCell.Tab.0.right" timestamp="1582020176635">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582018302374" />
+    <state width="1899" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582020176635" />
     <state width="1899" height="223" key="GridCell.Tab.1.bottom" timestamp="1581934053477">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

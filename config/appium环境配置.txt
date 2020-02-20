@@ -35,3 +35,7 @@
 
 5、appium安装
 直接安装。
+
+6、安装weditor
+pip install --pre --upgrade weditor
+python -m weditor

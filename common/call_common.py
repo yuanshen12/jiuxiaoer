@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 
-#  登录并进入到微商城首页
+#  微商城
 class Login(Element):
     determine = (By.CLASS_NAME, 'android.widget.Button')  # 地理位置授权
     manuslly_choose = (By.XPATH, "//*[contains(text(), '手动选择站点')]")  # 手动选择站点
@@ -45,7 +45,31 @@ class Login(Element):
             self.advertisement()
 
 
+# APP商城
+class App(Element):
+    call_ad = (By.ID, "com.callme.mall:id/close")  # 去掉广告
+    call_location = (By.ID, "com.callme.mall:id/station")  # 定位切换区域
+    call_seek = (By.ID, "com.callme.mall:id/content")  # 定位搜索区域
+    call_search = (By.ID, "com.callme.mall:id/addreLayout")  # 确定贵阳站
+
+    def wait(self, choose, display):  # 显示等待
+        wait = WebDriverWait(self.driver, 10, 0.1).until(choose(display))
+        return wait
+
+    def ad(self):  # 去广告
+        # self.wait(EC.presence_of_element_located, self.call_location).click()
+        # self.wait(EC.presence_of_element_located, self.call_seek).send_keys('贵阳')
+        # self.wait(EC.presence_of_all_elements_located, self.call_seek)[2].click()
+        # self.wait(EC.presence_of_element_located, self.call_seek).click()
+        # self.wait(EC.presence_of_element_located, self.call_seek).send_keys("贵阳站")
+        # self.wait(EC.presence_of_all_elements_located, self.call_search)[0].click()
+        try:
+            self.wait(EC.element_to_be_clickable, self.call_ad).click()
+        except:
+            pass
+
+
 if __name__ == '__main__':
     driver = wechat()
-    name = Login(driver)
-    name.login()
+    name = App(driver)
+    name.ad()

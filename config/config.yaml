@@ -1,9 +1,10 @@
 platformName: Android
 platformVersion: 9
 deviceName: LKX7N17B09002482
-appName: weixin.apk
+appName: weixin.appmall
 
 chromeOptions: {'androidProcess': 'com.tencent.mm:tools'}
+automationName: UiAutomator2
 
 noReset: True
 unicodeKeyboard: True
@@ -17,8 +18,15 @@ environment: 酒小二
 #environment: 叫酒开发
 
 # 微商城，app，小程序只能释放其一。
+<<<<<<< HEAD
 #appPackage: com.tencent.mm  # 酒小二微商城
 #appActivity: com.tencent.mm.ui.LauncherUI  # 酒小二微商城
 
+=======
+
+#appPackage: com.tencent.mm  # 酒小二微商城
+#appActivity: com.tencent.mm.ui.LauncherUI  # 酒小二微商城
+
+>>>>>>> master
 appPackage: com.callme.mall  # 酒小二app
 appActivity: com.callme.mall.wxy.function.wellcome.SplashActivity  # 酒小二app

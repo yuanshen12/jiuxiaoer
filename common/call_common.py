@@ -51,10 +51,15 @@ class App(Element):
     call_location = (By.ID, "com.callme.mall:id/station")  # 定位切换区域
     call_seek = (By.ID, "com.callme.mall:id/content")  # 定位搜索区域
     call_search = (By.ID, "com.callme.mall:id/addreLayout")  # 确定贵阳站
+    call_home = (By.ID, "com.callme.mall:id/ll_tap")  # 首页菜单
 
     def wait(self, choose, display):  # 显示等待
         wait = WebDriverWait(self.driver, 10, 0.1).until(choose(display))
         return wait
+
+    def home(self, num=0):  # 显示等待
+        home = self.wait(EC.presence_of_all_elements_located, self.call_home)[num]
+        return home
 
     def ad(self):  # 去广告
         # self.wait(EC.presence_of_element_located, self.call_location).click()

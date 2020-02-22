@@ -68,6 +68,13 @@ class App(Element):
         self.wait(EC.presence_of_element_located, self.call_seek).click()
         self.wait(EC.presence_of_element_located, self.call_seek).send_keys("贵阳站")
         self.wait(EC.presence_of_all_elements_located, self.call_search)[0].click()
+    def ad(self):  # 去广告
+        # self.wait(EC.presence_of_element_located, self.call_location).click()
+        # self.wait(EC.presence_of_element_located, self.call_seek).send_keys('贵阳')
+        # self.wait(EC.presence_of_all_elements_located, self.call_seek)[2].click()
+        # self.wait(EC.presence_of_element_located, self.call_seek).click()
+        # self.wait(EC.presence_of_element_located, self.call_seek).send_keys("贵阳站")
+        # self.wait(EC.presence_of_all_elements_located, self.call_search)[0].click()
         try:
             self.wait(EC.element_to_be_clickable, self.call_ad).click()
         except:

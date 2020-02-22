@@ -19,3 +19,9 @@ class Element(object):
         names = name[1].format(two)
         name_to = (name[0],) + (names,)
         return name_to
+
+    def amends(self, one, two, three):
+        name = one
+        names = name[1].format(two, three)
+        name_to = (name[0],) + (names,)
+        return name_to

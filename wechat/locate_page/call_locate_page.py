@@ -189,4 +189,4 @@ class Locate(Login):
 if __name__ == '__main__':
     driver = wechat()
     PI = Locate(driver)
-    PI.locate_locate(1)
+    PI.locate_add(name='张三', phone=13558252700, tablet='305')

@@ -32,11 +32,11 @@ class Home(Login):
     def home_carousel(self, num=1):  # 首页打开轮播图(1,2……）
         while True:
             try:
-                self.swipe(840, 540, 200, 540, 500)
                 self.wait(EC.element_to_be_clickable, self.amend(self.call_carousel, num)).click()
                 break
             except:
-                pass
+                self.swipe(840, 540, 200, 540, 500)
+                continue
 
     def home_handpick(self, num):  # 精选列表（0,1,2,3,4,5,6,7,8）
         self.wait(EC.presence_of_all_elements_located, self.call_handpick)[num].click()
@@ -44,11 +44,11 @@ class Home(Login):
     def home_activity(self, num):  # 精选活动（0,1,2,3,4,5,6,7)
         while True:
             try:
-                self.swipe(600, 1000, 600, 600, 500)
                 self.wait(EC.presence_of_all_elements_located, self.call_activity)[num].click()
                 break
             except:
-                pass
+                self.swipe(600, 1200, 600, 600, 500)
+                continue
 
     def home_cart(self):  # 首页点进购物车
         self.wait(EC.presence_of_element_located, self.call_cart).click()
@@ -63,7 +63,7 @@ class Home(Login):
                 self.wait(EC.presence_of_all_elements_located, self.call_more)[num].click()
                 break
             except:
-                pass
+                continue
 
     def home_shopping(self, num):  # 首页点开抽屉（0,1,2,……）
         while True:

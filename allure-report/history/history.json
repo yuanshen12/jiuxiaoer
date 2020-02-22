@@ -1,0 +1,216 @@
+{
+  "e2a0e262b56bd2db20759aacc952f81d" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9cf8f6d676451d71",
+      "status" : "broken",
+      "statusDetails" : "_pytest.fixtures.FixtureLookupError: ('login', <FixtureRequest for <Function test_three>>)",
+      "time" : {
+        "start" : 1581756388594,
+        "stop" : 1581756388594,
+        "duration" : 0
+      }
+    } ]
+  },
+  "8d3c42dc7ed679c6756e62126dc018cb" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "94dc37b37ad4d773",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'str'",
+      "time" : {
+        "start" : 1581756388873,
+        "stop" : 1581756389005,
+        "duration" : 132
+      }
+    } ]
+  },
+  "4dc049ce2a6623a30431db2653ba5ca3" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "5cc73934389e83cc",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 2 == 123",
+      "time" : {
+        "start" : 1581756411592,
+        "stop" : 1581756411592,
+        "duration" : 0
+      }
+    } ]
+  },
+  "77b28c6dd2361ce9cfa4dbc33477d376" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "5695af01250ac6dd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1581756389073,
+        "stop" : 1581756389210,
+        "duration" : 137
+      }
+    } ]
+  },
+  "2199b53bd9b96847ac8d01c1f779c6cf" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ed65561a06e14d27",
+      "status" : "broken",
+      "statusDetails" : "_pytest.fixtures.FixtureLookupError: ('login', <FixtureRequest for <Function test_two>>)",
+      "time" : {
+        "start" : 1581756388528,
+        "stop" : 1581756388528,
+        "duration" : 0
+      }
+    } ]
+  },
+  "af1f898a4eb95b4cbdaf618a7868275b" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "26f67b0de87be1a5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1581756389601,
+        "stop" : 1581756389758,
+        "duration" : 157
+      }
+    } ]
+  },
+  "c85cb080fd3c8b834d184f0a53901605" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "6a77427267f9bca8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1581756388517,
+        "stop" : 1581756388518,
+        "duration" : 1
+      }
+    } ]
+  },
+  "5afae3ea3a42a6aa71bdbe32d16106e0" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "dc1db2ca44bdc9a5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1581756388601,
+        "stop" : 1581756388849,
+        "duration" : 248
+      }
+    } ]
+  },
+  "fb49ce816c2badd21bc6533c406ae2c3" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "be8da145247a730a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1581756389229,
+        "stop" : 1581756389405,
+        "duration" : 176
+      }
+    } ]
+  },
+  "8d0652c3f6a94484918f30eb8d78068e" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9b1a8bf8df25567c",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert None == '123'",
+      "time" : {
+        "start" : 1581756401044,
+        "stop" : 1581756411586,
+        "duration" : 10542
+      }
+    } ]
+  },
+  "72e8d7f492556430e1c67dacf0ef9c58" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4982c975907e36b9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1581756389413,
+        "stop" : 1581756389589,
+        "duration" : 176
+      }
+    } ]
+  }
+}

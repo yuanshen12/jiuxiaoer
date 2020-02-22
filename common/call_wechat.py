@@ -1,5 +1,4 @@
 from appium import webdriver
-import uiautomator2
 import yaml
 import os
 

@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class Home(Login):
-    call_locate = (By.ID, "com.callme.mall:id/ll_loc")  # 首页定位
+    call_locate = (By.ID, "com.callme.mall:id/tv_site_name")  # 首页定位
     call_seek = (By.ID, "com.callme.mall:id/et_search")  # 首页搜索
     call_carousel = (By.ID, "com.callme.mall:id/bannerViewPager")  # 首页轮播图
     call_handpick = (By.ID, "com.callme.mall:id/ll_icon")  # 首页酒类
@@ -28,7 +28,8 @@ class Home(Login):
         Login.home(self, num=0)
 
     def home_locate(self):  # 首页定位
-        self.wait(EC.presence_of_element_located, self.call_locate).click()
+        locate = self.wait(EC.presence_of_element_located, self.call_locate)
+        return locate
 
     def home_seek(self):  # 首页搜索
         self.wait(EC.presence_of_element_located, self.call_seek).click()

@@ -7,6 +7,10 @@ from appmall.home.call_home import Home
 
 class Locate(App):
     call_address = (By.ID, "com.callme.mall:id/station")  # 定位切换区域
+    call_seek = (By.ID, "com.callme.mall:id/content")  # 定位搜索区域
+    call_search = (By.ID, "com.callme.mall:id/addreLayout")  # 确定贵阳站
+    call_home = (By.ID, "com.callme.mall:id/ll_tap")  # 首页菜单
+
 
     def __init__(self, driver):
         super().__init__(driver)

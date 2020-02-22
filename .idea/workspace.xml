@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa5db4c-b260-4fcf-879f-f7e6af4b42ec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/appmall/locate/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appmall/locate/call_locate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RuoYi/.idea/RuoYi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../RuoYi/.idea/RuoYi.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RuoYi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RuoYi/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RuoYi/ruoyi-admin/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../RuoYi/ruoyi-admin/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appmall/home/call_home.py" beforeDir="false" afterPath="$PROJECT_DIR$/appmall/home/call_home.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appmall/locate/call_locate.py" beforeDir="false" afterPath="$PROJECT_DIR$/appmall/locate/call_locate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/call_common.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/call_common.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +33,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="hiddenUrls">
@@ -366,38 +366,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="654" y="258" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577932616824" />
-    <state width="1899" height="254" key="GridCell.Tab.0.bottom" timestamp="1582279346841">
+    <state width="1899" height="254" key="GridCell.Tab.0.bottom" timestamp="1582337911961">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582279346841" />
-    <state width="1899" height="254" key="GridCell.Tab.0.center" timestamp="1582279346841">
+    <state width="1899" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582337911961" />
+    <state width="1899" height="254" key="GridCell.Tab.0.center" timestamp="1582337911961">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582279346841" />
-    <state width="1899" height="254" key="GridCell.Tab.0.left" timestamp="1582279346840">
+    <state width="1899" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582337911961" />
+    <state width="1899" height="254" key="GridCell.Tab.0.left" timestamp="1582337911960">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582279346840" />
-    <state width="1899" height="254" key="GridCell.Tab.0.right" timestamp="1582279346841">
+    <state width="1899" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582337911960" />
+    <state width="1899" height="254" key="GridCell.Tab.0.right" timestamp="1582337911961">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582279346841" />
-    <state width="1899" height="223" key="GridCell.Tab.1.bottom" timestamp="1582256215605">
+    <state width="1899" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582337911961" />
+    <state width="1899" height="223" key="GridCell.Tab.1.bottom" timestamp="1582279540081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="223" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582256215605" />
-    <state width="1899" height="223" key="GridCell.Tab.1.center" timestamp="1582256215605">
+    <state width="1899" height="223" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582279540081" />
+    <state width="1899" height="223" key="GridCell.Tab.1.center" timestamp="1582279540080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="223" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582256215605" />
-    <state width="1899" height="223" key="GridCell.Tab.1.left" timestamp="1582256215605">
+    <state width="1899" height="223" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582279540080" />
+    <state width="1899" height="223" key="GridCell.Tab.1.left" timestamp="1582279540080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="223" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582256215605" />
-    <state width="1899" height="223" key="GridCell.Tab.1.right" timestamp="1582256215605">
+    <state width="1899" height="223" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582279540080" />
+    <state width="1899" height="223" key="GridCell.Tab.1.right" timestamp="1582279540081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="223" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582256215605" />
+    <state width="1899" height="223" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582279540081" />
     <state x="184" y="86" key="MergeDialog" timestamp="1579423043097">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

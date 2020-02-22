@@ -86,4 +86,4 @@ class Home(App):
 
 if __name__ == "__main__":
     name = Home(driver=wechat())
-    print(name.home_shopping(stat=5))
+    name.home_cart()

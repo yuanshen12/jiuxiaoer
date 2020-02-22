@@ -11,6 +11,8 @@
     <orderEntry type="module" module-name="api_automation_test" />
     <orderEntry type="module" module-name="untitled" />
     <orderEntry type="module" module-name="untitled" />
+    <orderEntry type="module" module-name="wechat_mall" />
+    <orderEntry type="module" module-name="wechat_test" />
   </component>
   <component name="PackageRequirementsSettings">
     <option name="requirementsPath" value="" />

@@ -119,4 +119,4 @@ class Home(Login):
 if __name__ == "__main__":
     driver = wechat()
     H = Home(driver)
-    H.home_carousel()
+    H.home_about()

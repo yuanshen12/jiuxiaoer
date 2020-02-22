@@ -20,6 +20,7 @@ class Login(Element):
     def webview(self, H5=()):  # 切换H5页面
         if H5 == 5:
             sleep(2)
+            # print(self.driver.contexts)  # 获取H5页面的activity
             self.driver.switch_to.context('WEBVIEW_com.tencent.mm:tools')
             handles = self.driver.window_handles
             sleep(2)

@@ -2,7 +2,6 @@ from appium import webdriver
 import uiautomator2
 import yaml
 import os
-from time import sleep
 
 
 #  启动微信并打开微商城

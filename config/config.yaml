@@ -12,28 +12,15 @@ resetKeyboard: True
 ip: 127.0.0.1
 port: 4723
 
-choose: 1  # 0、执行微商城。1、执行app。2、执行小程序
+choose: 0  # 0、执行微商城。1、执行app。2、执行小程序
 
 environment: 酒小二
 #environment: 叫酒开发
 
 # 微商城，app，小程序只能释放其一。
-<<<<<<< HEAD
 
-#appPackage: com.tencent.mm  # 酒小二微商城
-#appActivity: com.tencent.mm.ui.LauncherUI  # 酒小二微商城
+appPackage: com.tencent.mm  # 酒小二微商城
+appActivity: com.tencent.mm.ui.LauncherUI  # 酒小二微商城
 
-=======
-<<<<<<< HEAD
-#appPackage: com.tencent.mm  # 酒小二微商城
-#appActivity: com.tencent.mm.ui.LauncherUI  # 酒小二微商城
-
-=======
-
-#appPackage: com.tencent.mm  # 酒小二微商城
-#appActivity: com.tencent.mm.ui.LauncherUI  # 酒小二微商城
-
->>>>>>> master
->>>>>>> test
-appPackage: com.callme.mall  # 酒小二app
-appActivity: com.callme.mall.wxy.function.wellcome.SplashActivity  # 酒小二app
+#appPackage: com.callme.mall  # 酒小二app
+#appActivity: com.callme.mall.wxy.function.wellcome.SplashActivity  # 酒小二app

@@ -82,4 +82,4 @@ class Indent(Login):
 if __name__ == "__main__":
     driver = wechat()
     name = Indent(driver)
-    name.indent_del().click()
+    name.indent_buy().click()

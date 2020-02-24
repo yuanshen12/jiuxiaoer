@@ -17,11 +17,17 @@ class Locate(Login):
     call_list = (By.ID, "com.callme.mall:id/nameLayout")  # 地图模式位置列表
     call_history = (By.ID, "com.callme.mall:id/clean_history")  # 地图模式历史搜索删除
     call_cancel = (By.ID, "com.callme.mall:id/cancel")  # 定位搜索取消
-    call_info = (By.ID, "com.callme.mall:id/address")  # 定位当前地址
+    call_info = (By.ID, "com.callme.mall:id/address")  # 定位当前地址(门牌号)
     call_again = (By.ID, "com.callme.mall:id/location")  # 定位重新定位
-    call_name = (By.ID, "com.callme.mall:id/name")  # 定位收货地址
-    call_add = (By.LINK_TEXT, "text(\"新增地址\")")  # 定位新增地址
+    call_location = (By.ID, "com.callme.mall:id/name")  # 定位收货地址
+    call_add = "text(\"新增地址\")"  # 定位新增地址
     call_nearby = (By.ID, "com.callme.mall:id/image")  # 定位附近地址
+    call_name = (By.ID, "com.callme.mall:id/name")  # 定位新增姓名
+    call_women = (By.ID, "com.callme.mall:id/sex_women")  # 定位新增性别女
+    call_phone = (By.ID, "com.callme.mall:id/phone")  # 定位新增电话
+    call_add_location = (By.ID, "com.callme.mall:id/location")  # 定位新增位置
+    call_tag = (By.ID, "com.callme.mall:id/tag")  # 定位新增标签
+    call_save = (By.ID, "com.callme.mall:id/save")  # 定位新增保存
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -32,8 +38,7 @@ class Locate(Login):
         self.wait(EC.presence_of_element_located, self.call_address).click()
         self.wait(EC.presence_of_element_located, self.call_seek).send_keys(data[1])
         self.wait(EC.presence_of_all_elements_located, self.call_seek)[2].click()
-        names = self.wait(EC.presence_of_element_located, self.call_address)
-        return names
+        self.locate_sure()
 
     def locate_seek(self):  # 定位搜索
         self.wait(EC.presence_of_element_located, self.call_seek).click()
@@ -66,15 +71,37 @@ class Locate(Login):
         self.wait(EC.presence_of_element_located, self.call_again).click()
 
     def locate_name(self, num):  # 定位收货地址
-        self.wait(EC.presence_of_all_elements_located, self.call_name)[num].click()
+        self.wait(EC.presence_of_all_elements_located, self.call_location)[num].click()
 
     def locate_add(self):  # 定位新增地址
-        sleep(3)
-        self.swipe(600, 1200, 500, 600, 500)
-        # self.driver.find_element_by_android_uiautomator('text(\"新增地址\")').click()
-        self.wait(EC.element_to_be_clickable, self.call_add).click()
+        while True:
+            try:
+                self.driver.find_element_by_android_uiautomator(self.call_add).click()
+                break
+            except:
+                self.swipe(600, 1200, 600, 600, 500)
+
+    def locate_adds(self, name='测试', women=1, phone=(), info=(), tag=()):  # 定位新增地址列表
+        self.locate_add()
+        self.wait(EC.presence_of_element_located, self.call_name).send_keys(name)
+        if women == 0:
+            self.wait(EC.presence_of_element_located, self.call_women).click()
+        self.wait(EC.presence_of_element_located, self.call_phone).send_keys(phone)
+        self.wait(EC.presence_of_element_located, self.call_again).click()
+        self.wait(EC.presence_of_all_elements_located, self.call_list)[0].click()
+        self.wait(EC.presence_of_element_located, self.call_info).send_keys(info)
+        self.wait(EC.presence_of_element_located, self.call_tag).send_keys(tag)
+        self.wait(EC.element_to_be_clickable, self.call_save).click()
+
+    def locate_nearby(self, num):  # 定位附近地址
+        while True:
+            try:
+                self.wait(EC.presence_of_all_elements_located, self.call_nearby)[num].click()
+                break
+            except:
+                self.swipe(600, 1200, 600, 800, 500)
 
 
 if __name__ == "__main__":
-    name = Locate(driver=wechat())
-    name.locate_add()
+    names = Locate(driver=wechat())
+    names.locate_address()

@@ -4,95 +4,23 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "_pytest.fixtures.FixtureLookupError: ('login', <FixtureRequest for <Function test_two>>)",
+      "name" : "selenium.common.exceptions.TimeoutException: Message:",
       "children" : [ {
-        "name" : "test_two",
-        "uid" : "ed65561a06e14d27",
-        "parentUid" : "9513b083e1de0a9561e481f09553a132",
+        "name" : "test_1",
+        "uid" : "ff02b7def29d2054",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1581756388528,
-          "stop" : 1581756388528,
-          "duration" : 0
+          "start" : 1582532461527,
+          "stop" : 1582532489789,
+          "duration" : 28262
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "9513b083e1de0a9561e481f09553a132"
-    }, {
-      "name" : "_pytest.fixtures.FixtureLookupError: ('login', <FixtureRequest for <Function test_three>>)",
-      "children" : [ {
-        "name" : "test_three",
-        "uid" : "9cf8f6d676451d71",
-        "parentUid" : "a8264da60f58aaa42695e613fa75cb61",
-        "status" : "broken",
-        "time" : {
-          "start" : 1581756388594,
-          "stop" : 1581756388594,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "a8264da60f58aaa42695e613fa75cb61"
-    }, {
-      "name" : "TypeError: a bytes-like object is required, not 'str'",
-      "children" : [ {
-        "name" : "test2",
-        "uid" : "94dc37b37ad4d773",
-        "parentUid" : "a915dbf0df9da20f1722420ea05ccc06",
-        "status" : "broken",
-        "time" : {
-          "start" : 1581756388873,
-          "stop" : 1581756389005,
-          "duration" : 132
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "a915dbf0df9da20f1722420ea05ccc06"
+      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
-  }, {
-    "name" : "Product defects",
-    "children" : [ {
-      "name" : "AssertionError: assert None == '123'",
-      "children" : [ {
-        "name" : "test_01",
-        "uid" : "9b1a8bf8df25567c",
-        "parentUid" : "35d94162b0f08494189d24d65096ee4f",
-        "status" : "failed",
-        "time" : {
-          "start" : 1581756401044,
-          "stop" : 1581756411586,
-          "duration" : 10542
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "35d94162b0f08494189d24d65096ee4f"
-    }, {
-      "name" : "AssertionError: assert 2 == 123",
-      "children" : [ {
-        "name" : "test_02",
-        "uid" : "5cc73934389e83cc",
-        "parentUid" : "2a6d06ae7e097f511b016bf864ccab56",
-        "status" : "failed",
-        "time" : {
-          "start" : 1581756411592,
-          "stop" : 1581756411592,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "2a6d06ae7e097f511b016bf864ccab56"
-    } ],
-    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   } ]
 }

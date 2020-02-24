@@ -25,7 +25,7 @@ class Home(Login):
 
     def __init__(self, driver):
         super().__init__(driver)
-        Login.home(self, num=0)
+        # Login.home(self, num=0)
 
     def home_locate(self):  # 首页定位
         locate = self.wait(EC.presence_of_element_located, self.call_locate)

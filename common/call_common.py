@@ -16,7 +16,7 @@ class Login(Element):
     advertising = (By.ID, "newCloseBtn")  # 点击取消弹屏广告
 
     call_ad = (By.ID, "com.callme.mall:id/close")  # 去掉广告
-    call_home = (By.ID, "com.callme.mall:id/ll_tap")  # 首页菜单
+    call_home = (By.ID, "com.callme.mall:id/tv_tab_title")  # 首页菜单
 
     def wait(self, choose, display):  # 显示等待
         wait = WebDriverWait(self.driver, 20, 0.3).until(choose(display))
@@ -52,7 +52,7 @@ class Login(Element):
 
 # APP商城
     def home(self, num=0):  # 首页底部菜单
-        home = self.wait(EC.presence_of_all_elements_located, self.call_home)[num]
+        home = self.driver.find_elements(*self.call_home)[num]
         return home
 
     def ad(self):  # 去广告
@@ -74,4 +74,4 @@ class Login(Element):
 if __name__ == '__main__':
     driver = wechat()
     name = Login(driver)
-    name.ad()
+    name.home(2)

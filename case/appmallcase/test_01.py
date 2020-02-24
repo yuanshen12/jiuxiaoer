@@ -11,9 +11,7 @@ class TestHome(TestCase):
         data = Login.get_data(1)
         locate = Locate(self.driver)
         home = Home(self.driver)
-        home.home_locate().click()
         locate.locate_address()
-        locate.locate_sure()
         assert data[1] in home.home_locate().text
 
     def test_2(self):  # 定位搜索地图模式

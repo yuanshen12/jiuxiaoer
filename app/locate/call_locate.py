@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from common.call_wechat import wechat
 from common.call_common import Login
-from appmall.home.call_home import Home
+from app.home.call_home import Home
 from time import sleep
 
 

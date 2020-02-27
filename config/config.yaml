@@ -1,7 +1,7 @@
 platformName: Android
 platformVersion: 9
 deviceName: LKX7N17B09002482
-appName: weixin.appmall
+appName: weixin.app
 
 chromeOptions: {'androidProcess': 'com.tencent.mm:tools'}
 automationName: UiAutomator2

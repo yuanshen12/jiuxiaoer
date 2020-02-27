@@ -1,5 +1,5 @@
-from appmall.home.call_home import Home
-from appmall.locate.call_locate import Locate
+from app.home.call_home import Home
+from app.locate.call_locate import Locate
 from common.call_statend import TestCase
 from common.call_common import Login
 import pytest

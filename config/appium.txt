@@ -1,0 +1,41 @@
+一、环境（以window10专业版64位为例）
+1、JDK13.0.2（64位）>https://www.oracle.com/java/technologies/javase-jdk13-downloads.html
+2、android-sdk >https://en.softonic.com/download/android-sdk/windows/post-download
+3、python3.7 >https://www.python.org/
+4、appium > http://appium.io/
+5、node.js > https://nodejs.org/en/download/
+
+二、
+1、下载jdk安装，配置环境变量。
+我的电脑>属性>高级>环境变量>系统变量>新建
+新建变量:JAVA_HOME 值:D:\Jmeter\jak8（根据自己安装的路径）
+新建变量:CLASSPATH 值：.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar
+变量：path 值:%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
+
+验证环境配置。cmd>java -version
+
+2、下载SDK,配置环境变量。
+使用模拟器，(解压后双击里面SDKmanager.exe)
+我的电脑>属性>高级>环境变量>系统变量
+新建变量:ANDROID_HOME，值：E:\Program Files (x86)\appium\sdk\Andriod_SDK(根据直接加压路径）
+变量：path 值：E:\Program Files (x86)\appium\sdk\Andriod_SDK\platform-tools
+变量：path 值：E:\Program Files (x86)\appium\sdk\Andriod_SDK\tools
+
+验证环境配置。cmd>adb
+连接手机查看端口是否正常。cmd>adb devices
+
+3、python安装。
+官网下载直接安装。
+
+4、node.js 安装
+直接安装。
+
+验证：cmd>node -v 或者npm
+没有报错就是成功
+
+5、appium安装
+直接安装。
+
+6、安装weditor
+pip install --pre --upgrade weditor
+python -m weditor

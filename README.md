@@ -15,11 +15,9 @@
 9、wechat页面和操作流程封装\
 \
 使用较为流行的PO模式。
-1、页面封装
-2、操作元素
-3、合成用例
-4、生成报告
+页面封装 → 操作元素 → 合成用例 → 生成报告
 
+>[appium环境配置](https://github.com/yuanshen12/jiuxiaoer/blob/test/config/appium.txt)
 >[框架原型图](https://github.com/yuanshen12/jiuxiaoer/blob/master/config/call_me.jpg)
 
 ## 微商城框架图

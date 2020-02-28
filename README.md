@@ -18,7 +18,7 @@
 页面封装 → 操作元素 → 合成用例 → 生成报告
 
 >[appium环境配置](https://github.com/yuanshen12/jiuxiaoer/blob/test/appium.text)\
->[框架原型图](http://20200229.oss-cn-beijing.aliyuncs.com/20200228/call_me.jpg?Expires=1582897424&OSSAccessKeyId=TMP.hiFyUD12KgS985KfGCwqomMBVNsXcPaQmTdV2WFY5k6XLZWLhagfoZiELsQQjyxej6jbdXgsLG8fRKoKtwg8jfXe8EFU1QJxMRSS7wHTTsezbc4HW5N4f5dWRqy91b.tmp&Signature=FQ%2BaXiHzouSZza0wbPdhj9Urj70%3D)
+>[框架原型图](http://20200229.oss-cn-beijing.aliyuncs.com/20200228/call_me.jpg?Expires=1582900308&OSSAccessKeyId=TMP.hiFyUD12KgS985KfGCwqomMBVNsXcPaQmTdV2WFY5k6XLZWLhagfoZiELsQQjyxej6jbdXgsLG8fRKoKtwg8jfXe8EFU1QJxMRSS7wHTTsezbc4HW5N4f5dWRqy91b.tmp&Signature=0JOgqW8wgK7FRLAKTLXaZ%2B3Esco%3D)
 
 ## 微商城框架图
 

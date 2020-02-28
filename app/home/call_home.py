@@ -23,10 +23,6 @@ class Home(Login):
     call_cart = (By.ID, "com.callme.mall:id/rl_cart")  # 首页购物车
     call_more = (By.ID, "com.callme.mall:id/seeMore")  # 首页查看更多
 
-    def __init__(self, driver):
-        super().__init__(driver)
-        # Login.home(self, num=0)
-
     def home_locate(self):  # 首页定位
         locate = self.wait(EC.presence_of_element_located, self.call_locate)
         return locate

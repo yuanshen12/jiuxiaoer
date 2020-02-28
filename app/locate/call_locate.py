@@ -29,10 +29,6 @@ class Locate(Login):
     call_tag = (By.ID, "com.callme.mall:id/tag")  # 定位新增标签
     call_save = (By.ID, "com.callme.mall:id/save")  # 定位新增保存
 
-    def __init__(self, driver):
-        super().__init__(driver)
-        Home(driver).home_locate().click()
-
     def locate_address(self):  # 定位区域
         data = Login.get_data(1)
         self.wait(EC.presence_of_element_located, self.call_address).click()

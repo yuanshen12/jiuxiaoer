@@ -50,14 +50,14 @@ class Login(Element):
             self.wait(EC.element_to_be_clickable, self.confirm).click()
             self.advertisement()
 
-# APP商城
+# APP商城（不使用显示等待）
     def home(self, num=0):  # 首页底部菜单
         home = self.driver.find_elements(*self.call_home)[num]
         return home
 
     def ad(self):  # 去广告
         try:
-            self.wait(EC.element_to_be_clickable, self.call_ad).click()
+            self.driver.find_element(*self.call_ad).click()
         except:
             pass
 

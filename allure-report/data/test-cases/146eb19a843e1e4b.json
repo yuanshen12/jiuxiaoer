@@ -1,0 +1,94 @@
+{
+  "uid" : "146eb19a843e1e4b",
+  "name" : "test_2",
+  "fullName" : "case.appmallcase.test_01.TestHome#test_2",
+  "historyId" : "e82b32580ddafb4b0cc0e5940be4a429",
+  "time" : {
+    "start" : 1583135488226,
+    "stop" : 1583135503960,
+    "duration" : 15734
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1583135461640,
+      "stop" : 1583135472244,
+      "duration" : 10604
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1583135503960,
+      "stop" : 1583135506298,
+      "duration" : 2338
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "case.appmallcase"
+  }, {
+    "name" : "suite",
+    "value" : "test_01"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestHome"
+  }, {
+    "name" : "host",
+    "value" : "GXZ-OFFICE"
+  }, {
+    "name" : "thread",
+    "value" : "4436-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "case.appmallcase.test_01"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "d23bdb4db77b7ca",
+      "status" : "passed",
+      "time" : {
+        "start" : 1582532489850,
+        "stop" : 1582532489851,
+        "duration" : 1
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "146eb19a843e1e4b.json",
+  "parameterValues" : [ ]
+}

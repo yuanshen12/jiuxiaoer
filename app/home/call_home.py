@@ -24,11 +24,11 @@ class Home(Login):
     call_more = (By.ID, "com.callme.mall:id/seeMore")  # 首页查看更多
 
     def home_locate(self):  # 首页定位
-        locate = self.wait(EC.presence_of_element_located, self.call_locate)
+        locate = self.driver.find_element(*self.call_locate)
         return locate
 
     def home_seek(self):  # 首页搜索
-        self.wait(EC.presence_of_element_located, self.call_seek).click()
+        self.driver.find_element(*self.call_seek).click()
 
     def home_carousel(self):  # 首页轮播图
         self.driver.find_element(*self.call_carousel).click()

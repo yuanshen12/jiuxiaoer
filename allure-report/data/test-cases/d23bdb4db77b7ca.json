@@ -1,5 +1,5 @@
 {
-  "uid" : "e1714558039c989d",
+  "uid" : "d23bdb4db77b7ca",
   "name" : "test_2",
   "fullName" : "case.appmallcase.test_01.TestHome#test_2",
   "historyId" : "e82b32580ddafb4b0cc0e5940be4a429",
@@ -31,9 +31,9 @@
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "d34048918dd255f9",
+      "uid" : "eed6a634e1289906",
       "name" : "stdout",
-      "source" : "d34048918dd255f9.txt",
+      "source" : "eed6a634e1289906.txt",
       "type" : "text/plain",
       "size" : 16
     } ],
@@ -89,14 +89,12 @@
   } ],
   "parameters" : [ ],
   "links" : [ ],
-  "hidden" : false,
-  "retry" : false,
+  "hidden" : true,
+  "retry" : true,
   "extra" : {
-    "severity" : "normal",
-    "retries" : [ ],
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "e1714558039c989d.json",
+  "source" : "d23bdb4db77b7ca.json",
   "parameterValues" : [ ]
 }

@@ -12,12 +12,12 @@ resetKeyboard: True
 ip: 127.0.0.1
 port: 4723
 
-choose: 1  # 0、执行微商城。1、执行app。2、执行小程序
-
+#  测试环境选择
 environment: 酒小二
 #environment: 叫酒开发
 
-# 微商城，app，小程序只能释放其一。
+#  测试环境选择（包括app商城，微商城，小程序）
+choose: 1  # 0、执行微商城。1、执行app。2、执行小程序
 
 #appPackage: com.tencent.mm  # 酒小二微商城
 #appActivity: com.tencent.mm.ui.LauncherUI  # 酒小二微商城

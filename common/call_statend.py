@@ -1,4 +1,4 @@
-import pytest,unittest
+import pytest, unittest
 from time import sleep
 from common.call_wechat import wechat
 
@@ -16,7 +16,3 @@ class TestCase:
         print('用例执行后')
         sleep(2)
         self.driver.close_app()
-
-
-
-

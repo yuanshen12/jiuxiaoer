@@ -4,12 +4,13 @@ from common.call_common import Login
 import pytest
 
 
+@pytest.mark.app
 class TestHome(TestCase):
-
     def test_1(self):  # 定位搜索切换区域
         locate = SendLocate(self.driver)
         assert locate.send_locate_info() is True
 
+    @pytest.mark.skip
     def test_2(self):  # 定位切换地图模式
         locate = SendLocate(self.driver)
         maps = locate.send_locate_map()
@@ -37,4 +38,4 @@ class TestHome(TestCase):
 
 
 if __name__ == "__main__":
-    pytest.main(['-s', '-q', 'test_01.py'])
+    pytest.main(['-s', '-q', 'test_11.py'])

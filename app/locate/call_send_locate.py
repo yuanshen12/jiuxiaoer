@@ -1,6 +1,8 @@
+from selenium.common.exceptions import NoSuchElementException
 from common.call_wechat import wechat
 from app.locate.call_locate import Locate
 from app.home.call_home import Home
+from common.call_common import config_yaml
 from time import sleep
 
 
@@ -8,61 +10,56 @@ class SendLocate(Locate):
 
     def __init__(self, driver):
         super().__init__(driver)
-        sleep(2)
         home = Home(self.driver)
         home.home_locate().click()
 
-    def send_locate_info(self):  # 定位页面确定当前位置
+    def send_locate_info_location(self):  # 当前地址
+        self.locate_again().click()
+        info = self.locate_info()
+        return info
+
+    def send_locate_add_location(self, women):  # 新增地址
+        data = config_yaml()
         try:
-            self.locate_again()
-            self.locate_info()
-        except:
-            return False
-        else:
+            self.locate_add().click()
+            self.locate_adds(data['name'], data['phone'], data['tablet'], data['tag'], women)
             return True
-
-    def send_locate_sure(self):  # 区域切换并搜索定位
-        self.locate_address()
-        self.locate_sure()
-        locate = Home(self.driver)
-        return locate.home_locate()
-
-    def send_locate_map(self):  # 定位地图模式
-        try:
-            self.locate_locate()
-            self.locate_update()
-            self.locate_list(1)
-        except:
+        except NoSuchElementException:
             return False
+
+    def send_locate_map_location(self, names=0):  # 定位地图模式
+        if names == 0:
+            self.locate_locate().click()
+            self.locate_update().click()
+            maps = self.locate_list(1)
+            return maps
         else:
-            return True
+            maps = self.locate_list(1)
+            return maps
 
-    def send_locate_name(self):  # 定位收货地址
-        try:
-            num = 0
-            while num < 3:
-                try:
-                    self.locate_name(num)
-                except:
-                    self.locate_location_sure()
-                num += 1
-        except:
-            return False
+    def send_locate_nearby(self, num):  # 定位附近地址
+        sleep(2)
+        nearby_name = self.locate_nearby(num)
+        return nearby_name
+
+    def send_locate_name(self, num):  # 定位收货地址
+        locate_name = self.locate_name(num)
+        return locate_name
+
+    def send_locate_search(self, search=0):  # 区域切换并搜索定位
+        data = config_yaml()
+        if search == 0:
+            self.locate_address(data['station'])
+            self.locate_seek()
+            self.locate_sure(data['stations'])
+            locate_search = self.locate_sure_location()
+            return locate_search
         else:
-            return True
-
-    def send_locate_nearby(self):  # 定位附近地址
-        self.locate_nearby(1)
-        home = Home(self.driver)
-        names = home.home_locate()
-        return names
-
-    def send_locate_add(self):  # 定位新增地址
-        self.locate_add()
-        self.locate_adds(self)
+            locate_search = self.locate_sure_location()
+            return locate_search
 
 
 if __name__ == '__main__':
     driver = wechat()
     name = SendLocate(driver)
-    name.send_locate_add()
+    name.send_locate_add_location()

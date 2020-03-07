@@ -1,11 +1,18 @@
 from selenium.webdriver.common.by import By
-from common.call_wechat import wechat
 from element.call_element import Element
 from time import sleep
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 import csv
+import yaml
 import time, os
+
+
+def config_yaml():  # 获取配置文件yaml信息
+    path = os.path.normpath(os.path.join(os.path.abspath(__file__), "..", ".."))
+    with open("{}/config/config.yaml".format(path), 'r', encoding='utf-8') as file:
+        date = yaml.safe_load(file)
+        return date
 
 
 #  微商城
@@ -50,7 +57,7 @@ class Login(Element):
             self.wait(EC.element_to_be_clickable, self.confirm).click()
             self.advertisement()
 
-# APP商城（不使用显示等待）
+    # APP商城（不使用显示等待）
     def home(self, num=0):  # 首页底部菜单
         home = self.driver.find_elements(*self.call_home)[num]
         return home

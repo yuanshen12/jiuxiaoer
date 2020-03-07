@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from common.call_wechat import wechat
 from common.call_common import Login
-from app.home.call_home import Home
+from selenium.common.exceptions import NoSuchElementException
 from time import sleep
 
 
@@ -30,29 +30,32 @@ class Locate(Login):
     call_tag = (By.ID, "com.callme.mall:id/tag")  # 定位新增标签
     call_save = (By.ID, "com.callme.mall:id/save")  # 定位新增保存
 
-    def locate_address(self):  # 定位区域
-        data = Login.get_data(1)
-        self.driver.find_element(*self.call_address).click()
-        self.driver.find_element(*self.call_seek).send_keys(data[1])
-        self.driver.find_elements(*self.call_seek)[2].click()
+    def locate_address(self, station):  # 定位区域
+        self.wait(EC.element_to_be_clickable, self.call_address).click()
+        self.wait(EC.element_to_be_clickable, self.call_seek).send_keys(station)
+        self.wait(EC.visibility_of_any_elements_located, self.call_seek)[2].click()
 
     def locate_seek(self):  # 定位搜索
-        self.driver.find_element(*self.call_seek).click()
+        self.wait(EC.element_to_be_clickable, self.call_seek).click()
 
-    def locate_sure(self):  # 定位搜索切换地址
-        data = Login.get_data(2)
-        self.locate_seek()
-        self.driver.find_element(*self.call_seek).send_keys(data[1])
-        self.driver.find_elements(*self.call_search)[0].click()
+    def locate_sure(self, station):  # 定位搜索切换地址
+        self.wait(EC.visibility_of_element_located, self.call_seek).send_keys(station)
+
+    def locate_sure_location(self, num=0):  # 搜索确定切换地址
+        locate_search = self.wait(EC.visibility_of_all_elements_located, self.call_name)[num]
+        return locate_search
 
     def locate_locate(self):  # 定位地图模式
-        self.driver.find_element(*self.call_locate).click()
+        locate = self.wait(EC.element_to_be_clickable, self.call_locate)
+        return locate
 
     def locate_update(self):  # 定位地图模式更新地址
-        self.driver.find_element(*self.call_update).click()
+        update = self.wait(EC.element_to_be_clickable, self.call_update)
+        return update
 
     def locate_list(self, num):  # 定位地图位置列表
-        self.driver.find_elements(*self.call_list)[num].click()
+        lists = self.wait(EC.visibility_of_any_elements_located, self.call_name)[num]
+        return lists
 
     def locate_history(self):  # 地图模式历史搜索删除
         self.driver.find_element(*self.call_history).click()
@@ -61,47 +64,39 @@ class Locate(Login):
         self.driver.find_element(*self.call_cancel).click()
 
     def locate_info(self):  # 定位当前地址
-        self.driver.find_element(*self.call_info).click()
+        info = self.wait(EC.visibility_of_element_located, self.call_info)
+        return info
 
     def locate_again(self):  # 定位重新定位
-        self.driver.find_element(*self.call_again).click()
+        again = self.wait(EC.element_to_be_clickable, self.call_again)
+        return again
 
     def locate_name(self, num):  # 定位收货地址
-        self.driver.find_elements(*self.call_location)[num].click()
+        location = self.wait(EC.visibility_of_any_elements_located, self.call_info)[num]
+        return location
 
     def locate_location_sure(self):  # 定位收货地址确定
-        self.driver.find_element(*self.call_location_sure).click()
+        location_sure = self.wait(EC.visibility_of_element_located, self.call_location_sure)
+        return location_sure
 
     def locate_add(self):  # 定位新增地址
-        num = 0
-        while num < 5:
-            try:
-                self.driver.find_element(*self.call_add).click()
-            except:
-                self.swipe(600, 1200, 600, 600, 500)
-            else:
-                break
+        add = self.wait(EC.visibility_of_element_located, self.call_add)
+        return add
 
-    def locate_adds(self, women=1):  # 定位新增地址列表
-        data = Login.get_data(3)
-        self.driver.find_element(*self.call_name).send_keys(data[1])
-        if women == 0:
-            self.driver.find_element(*self.call_women).click()
-        self.driver.find_element(*self.call_phone).send_keys(data[2])
-        self.driver.find_element(*self.call_again).click()
-        self.driver.find_elements(*self.call_list)[0].click()
-        self.driver.find_element(*self.call_info).send_keys(data[3])
-        self.driver.find_element(*self.call_tag).send_keys(data[4])
-        self.driver.find_element(*self.call_save).click()
+    def locate_adds(self, name, phone, tablet, tag, women=1):  # 定位新增地址
+        self.wait(EC.visibility_of_element_located, self.call_name).send_keys(name)
+        if women != 1:
+            self.wait(EC.element_to_be_clickable, self.call_women).click()
+        self.wait(EC.visibility_of_element_located, self.call_phone).send_keys(phone)
+        self.wait(EC.visibility_of_element_located, self.call_again).click()
+        self.wait(EC.visibility_of_any_elements_located, self.call_list)[1].click()
+        self.wait(EC.visibility_of_element_located, self.call_info).send_keys(tablet)
+        self.wait(EC.visibility_of_element_located, self.call_tag).send_keys(tag)
+        self.wait(EC.element_to_be_clickable, self.call_save).click()
 
     def locate_nearby(self, num):  # 定位附近地址
-        while True:
-            try:
-                self.driver.find_elements(*self.call_nearby)[num].click()
-            except:
-                self.swipe(600, 1200, 600, 800, 500)
-            else:
-                break
+        nearby = self.wait(EC.visibility_of_all_elements_located, self.call_name)[num]
+        return nearby
 
 
 if __name__ == "__main__":

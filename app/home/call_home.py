@@ -1,5 +1,4 @@
 from selenium.webdriver.common.by import By
-from common.call_common import wechat
 from common.call_common import Login
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -24,7 +23,7 @@ class Home(Login):
     call_more = (By.ID, "com.callme.mall:id/seeMore")  # 首页查看更多
 
     def home_locate(self):  # 首页定位
-        locate = self.driver.find_element(*self.call_locate)
+        locate = self.wait(EC.element_to_be_clickable, self.call_locate)
         return locate
 
     def home_seek(self):  # 首页搜索

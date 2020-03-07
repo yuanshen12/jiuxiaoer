@@ -24,3 +24,15 @@ choose: 1  # 0、执行微商城。1、执行app。2、执行小程序
 
 appPackage: com.callme.mall  # 酒小二app
 appActivity: com.callme.mall.wxy.function.wellcome.SplashActivity  # 酒小二app
+
+#  配置站点
+station: 贵港
+stations: 火车站
+#  新增地址
+name: 测试
+phone: 13558252702
+tablet: 门牌号
+tag: 标签
+#  搜索酒类
+search: 搜素条件
+

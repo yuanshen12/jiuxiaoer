@@ -56,4 +56,4 @@ class TestCase:
 
 
 if __name__ == '__main__':
-    pytest.main(['-s', '-q', 'call_wechat.py'])
+    wechat()

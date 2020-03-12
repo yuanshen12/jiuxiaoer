@@ -1,9 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from common.call_wechat import wechat
-from common.call_common import Login
-from selenium.common.exceptions import NoSuchElementException
-from time import sleep
+from common.call_common_app import Login
 
 
 # 首页进入的定位页面
@@ -29,6 +27,7 @@ class Locate(Login):
     call_add_location = (By.ID, "com.callme.mall:id/location")  # 定位新增位置
     call_tag = (By.ID, "com.callme.mall:id/tag")  # 定位新增标签
     call_save = (By.ID, "com.callme.mall:id/save")  # 定位新增保存
+    call_login = (By.ID, "com.callme.mall:id/login")  # 登录
 
     def locate_address(self, station):  # 定位区域
         self.wait(EC.element_to_be_clickable, self.call_address).click()
@@ -68,7 +67,7 @@ class Locate(Login):
         return info
 
     def locate_again(self):  # 定位重新定位
-        again = self.wait(EC.element_to_be_clickable, self.call_again)
+        again = self.wait(EC.visibility_of_element_located, self.call_again)
         return again
 
     def locate_name(self, num):  # 定位收货地址
@@ -83,13 +82,14 @@ class Locate(Login):
         add = self.wait(EC.visibility_of_element_located, self.call_add)
         return add
 
-    def locate_adds(self, name, phone, tablet, tag, women=1):  # 定位新增地址
+    def locate_adds(self, name, phone, tablet, tag, women=1, num=1):  # 定位新增地址
         self.wait(EC.visibility_of_element_located, self.call_name).send_keys(name)
         if women != 1:
             self.wait(EC.element_to_be_clickable, self.call_women).click()
         self.wait(EC.visibility_of_element_located, self.call_phone).send_keys(phone)
-        self.wait(EC.visibility_of_element_located, self.call_again).click()
-        self.wait(EC.visibility_of_any_elements_located, self.call_list)[1].click()
+        if num == 1:
+            self.wait(EC.visibility_of_element_located, self.call_again).click()
+            self.wait(EC.visibility_of_any_elements_located, self.call_list)[1].click()
         self.wait(EC.visibility_of_element_located, self.call_info).send_keys(tablet)
         self.wait(EC.visibility_of_element_located, self.call_tag).send_keys(tag)
         self.wait(EC.element_to_be_clickable, self.call_save).click()
@@ -98,7 +98,11 @@ class Locate(Login):
         nearby = self.wait(EC.visibility_of_all_elements_located, self.call_name)[num]
         return nearby
 
+    def locate_login(self):  # 登录
+        login = self.driver.find_element(*self.call_login)
+        return login
+
 
 if __name__ == "__main__":
     names = Locate(driver=wechat())
-    names.locate_adds()
+    names.locate_login()

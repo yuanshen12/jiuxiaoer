@@ -2,7 +2,7 @@ from selenium.common.exceptions import NoSuchElementException
 from common.call_wechat import wechat
 from app.locate.call_locate import Locate
 from app.home.call_home import Home
-from common.call_common import config_yaml
+from common.call_common_app import config_yaml
 from time import sleep
 
 
@@ -18,11 +18,11 @@ class SendLocate(Locate):
         info = self.locate_info()
         return info
 
-    def send_locate_add_location(self, women):  # 新增地址
+    def send_locate_add_location(self, women, num):  # 新增地址
         data = config_yaml()
         try:
             self.locate_add().click()
-            self.locate_adds(data['name'], data['phone'], data['tablet'], data['tag'], women)
+            self.locate_adds(data['name'], data['phone'], data['tablet'], data['tag'], women, num)
             return True
         except NoSuchElementException:
             return False
@@ -58,8 +58,18 @@ class SendLocate(Locate):
             locate_search = self.locate_sure_location()
             return locate_search
 
+    def send_locate_login(self):  # 登录
+        try:
+            sleep(2)
+            login = self.locate_login()
+            if login.text == '登录':
+                login.click()
+                self.login()
+        except NoSuchElementException:
+            pass
+
 
 if __name__ == '__main__':
     driver = wechat()
     name = SendLocate(driver)
-    name.send_locate_add_location()
+    name.send_locate_add_location(women=1, num=0)

@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from common.call_common import Login
+from common.call_common_app import Login
 from selenium.webdriver.support import expected_conditions as EC
 
 
@@ -23,11 +23,12 @@ class Home(Login):
     call_more = (By.ID, "com.callme.mall:id/seeMore")  # 首页查看更多
 
     def home_locate(self):  # 首页定位
-        locate = self.wait(EC.element_to_be_clickable, self.call_locate)
+        locate = self.wait(EC.visibility_of_element_located, self.call_locate)
         return locate
 
     def home_seek(self):  # 首页搜索
-        self.driver.find_element(*self.call_seek).click()
+        seek = self.wait(EC.visibility_of_element_located, self.call_seek)
+        return seek
 
     def home_carousel(self):  # 首页轮播图
         self.driver.find_element(*self.call_carousel).click()

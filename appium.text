@@ -39,3 +39,9 @@
 6、安装weditor
 pip install --pre --upgrade weditor
 python -m weditor
+
+7、获取app信息
+aapt dump badging D:\appium\qq.apk  （命令加上路径和apk, 列如QQ阅读）
+package: name='com.qq.reader'
+launchable-activity: name='com.qq.reader.activity.SplashActivity'
+

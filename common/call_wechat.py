@@ -21,7 +21,9 @@ def wechat():
     wechat['resetKeyboard'] = data['resetKeyboard']
     wechat['automationName'] = data['automationName']
     driver = webdriver.Remote('http://' + str(data['ip']) + ':' + str(data['port']) + '/wd/hub', wechat)
-    return driver
+    while True:
+        sleep(1)
+        driver.swipe(900, 1600, 100, 1600, 500)
 
 
 class TestCase:

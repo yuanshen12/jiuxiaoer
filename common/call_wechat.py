@@ -1,5 +1,5 @@
 from appium import webdriver
-from common.call_common import config_yaml
+from common.call_common_app import config_yaml
 from time import sleep
 import pytest
 

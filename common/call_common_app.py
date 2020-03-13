@@ -2,7 +2,6 @@ from selenium.webdriver.common.by import By
 from element.call_element import Element
 from selenium.common.exceptions import NoSuchElementException
 from time import sleep
-from common.call_wechat import wechat
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 import csv

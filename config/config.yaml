@@ -22,12 +22,8 @@ choose: 1  # 0、执行微商城。1、执行app。2、执行小程序
 #appPackage: com.tencent.mm  # 酒小二微商城
 #appActivity: com.tencent.mm.ui.LauncherUI  # 酒小二微商城
 
-#appPackage: com.callme.mall  # 酒小二app
-#appActivity: com.callme.mall.wxy.function.wellcome.SplashActivity  # 酒小二app
-
-#  QQ阅读
-appPackage: com.qq.reader
-appActivity: com.qq.reader.activity.SplashActivity
+appPackage: com.callme.mall  # 酒小二app
+appActivity: com.callme.mall.wxy.function.wellcome.SplashActivity  # 酒小二app
 
 
 #  配置站点

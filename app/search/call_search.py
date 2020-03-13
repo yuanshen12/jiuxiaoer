@@ -17,10 +17,6 @@ class Search(Login):
     call_money = (By.ID, "com.callme.mall:id/money")  # 所在购物车价钱
     call_settlement = (By.ID, "com.callme.mall:id/settlement")  # 去结算
 
-    def __init__(self, driver):
-        super().__init__(driver)
-        Home(self.driver).home_seek().click()
-
     def search_back(self):  # 搜索页面返回
         back = self.wait(EC.visibility_of_element_located, self.call_back)
         return back

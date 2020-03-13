@@ -27,7 +27,7 @@ class Home(Login):
         return locate
 
     def home_seek(self):  # 首页搜索
-        seek = self.wait(EC.visibility_of_element_located, self.call_seek)
+        seek = self.wait(EC.presence_of_element_located, self.call_seek)
         return seek
 
     def home_carousel(self):  # 首页轮播图

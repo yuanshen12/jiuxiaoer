@@ -24,7 +24,7 @@ class Balance(Login):
     call_balance_all = (By.ID, "com.callme.mall:id/maney_all")  # 商品总额
     call_balance_promotion = (By.ID, "com.callme.mall:id/maney_promotion")  # 促销金额
     call_balance_money = (By.ID, "com.callme.mall:id/money")  # 应付金额
-    call_balance_submit = (By.ID ,"com.callme.mall:id/submit")  # 提交订单
+    call_balance_submit = (By.ID, "com.callme.mall:id/submit")  # 提交订单
 
     def balance_time(self):  # 送达时间
         time = self.wait(EC.visibility_of_element_located, self.call_balance_time)
@@ -37,6 +37,50 @@ class Balance(Login):
     def balance_locate(self):  # 配送地址
         locate = self.wait(EC.visibility_of_element_located, self.call_balance_locate)
         return locate
+
+    def balance_wechat(self):  # 选择微信支付
+        weixin = self.wait(EC.visibility_of_element_located, self.call_balance_wechat)
+        return weixin
+
+    def balance_alipay(self):  # 选择支付宝
+        alipay = self.wait(EC.visibility_of_element_located, self.call_balance_alipay)
+        return alipay
+
+    def balance_pay(self):  # 选择货到付款
+        pay = self.wait(EC.visibility_of_element_located, self.call_balance_pay)
+        return pay
+
+    def balance_invoice(self):  # 选择发票
+        invoice = self.wait(EC.visibility_of_element_located, self.call_balance_invoice)
+        return invoice
+
+    def balance_coupon(self):  # 选择优惠券
+        coupon = self.wait(EC.visibility_of_element_located, self.call_balance_coupon)
+        return coupon
+
+    def balance_integral(self):  # 当前无积分
+        integral = self.wait(EC.visibility_of_element_located, self.call_balance_integral)
+        return integral
+
+    def balance_notes(self):  # 留言
+        notes = self.wait(EC.visibility_of_element_located, self.call_balance_notes)
+        return notes
+
+    def balance_all(self):  # 商品总额
+        all_one = self.wait(EC.visibility_of_element_located, self.call_balance_all)
+        return all_one
+
+    def balance_promotion(self):  # 促销金额
+        promotion = self.wait(EC.visibility_of_element_located, self.call_balance_promotion)
+        return promotion
+
+    def balance_money(self):  # 应付金额
+        money = self.wait(EC.visibility_of_element_located, self.call_balance_money)
+        return money
+
+    def balance_submit(self):  # 提交订单
+        submit = self.wait(EC.visibility_of_element_located, self.call_balance_submit)
+        return submit
 
 
 

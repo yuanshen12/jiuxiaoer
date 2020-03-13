@@ -82,7 +82,7 @@ class Locate(Login):
         add = self.wait(EC.visibility_of_element_located, self.call_add)
         return add
 
-    def locate_adds(self, name, phone, tablet, tag, women=1, num=1):  # 定位新增地址
+    def locate_adds(self, name, phone, tablet, tag, women=1, num=1):  # 定位新增地址(women is 1是男女，num is 1 选择地址）
         self.wait(EC.visibility_of_element_located, self.call_name).send_keys(name)
         if women != 1:
             self.wait(EC.element_to_be_clickable, self.call_women).click()

@@ -18,11 +18,11 @@ class SendLocate(Locate):
         info = self.locate_info()
         return info
 
-    def send_locate_add_location(self, women, num):  # 新增地址
+    def send_locate_add_location(self, women):  # 新增地址
         data = config_yaml()
         try:
             self.locate_add().click()
-            self.locate_adds(data['name'], data['phone'], data['tablet'], data['tag'], women, num)
+            self.locate_adds(data['name'], data['phone'], data['tablet'], data['tag'], women)
             return True
         except NoSuchElementException:
             return False

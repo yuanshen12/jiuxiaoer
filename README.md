@@ -17,7 +17,7 @@
 使用较为流行的PO模式。
 页面封装 → 操作元素 → 合成用例 → 生成报告
 
->[appium环境配置](https://github.com/yuanshen12/jiuxiaoer/blob/test/appium.text)
+>[appium环境配置](https://www.zybuluo.com/yuanshen12/note/1679397)
 
 ## 微商城框架图
 

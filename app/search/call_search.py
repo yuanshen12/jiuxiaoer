@@ -49,8 +49,9 @@ class Search(Login):
         money = self.wait(EC.visibility_of_element_located, self.call_money)
         return money
 
-    def search_settlement(self):
-        self.wait(EC.visibility_of_element_located, self.call_settlement)
+    def search_settlement(self):  # 去结算
+        settlement = self.wait(EC.visibility_of_element_located, self.call_settlement)
+        return settlement
 
 
 if __name__ == '__main__':

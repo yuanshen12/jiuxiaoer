@@ -8,11 +8,10 @@ from selenium.webdriver.support import expected_conditions as EC
 class Balance(Login):
     call_balance_time = (By.ID, "com.callme.mall:id/time")  # 送达时间
     call_balance_ok = (By.ID, "com.callme.mall:id/ok")  # 确定送达时间
+    call_balance_tag = (By.ID, "com.callme.mall:id/tag")  # 完全配送地址
     call_balance_locate = (By.ID, "com.callme.mall:id/address")  # 配送地址（选择地址）
     call_balance_use_exist = (By.ID, "com.callme.mall:id/useExist")  # 已有收货地址
     call_balance_range = (By.ID, "com.callme.mall:id/tag_Range")  # 超范围
-    call_balance_name = (By.ID, "com.callme.mall:id/name")  # 姓名
-    call_balance_phone = (By.ID, "com.callme.mall:id/phone")  # 电话
     call_balance_location = (By.ID, "com.callme.mall:id/location")  # 定位
     call_balance_wechat = (By.ID, "com.callme.mall:id/pay_weixin")  # 微信支付
     call_balance_alipay = (By.ID, "com.callme.mall:id/pay_alipay")  # 支付宝
@@ -25,6 +24,7 @@ class Balance(Login):
     call_balance_promotion = (By.ID, "com.callme.mall:id/maney_promotion")  # 促销金额
     call_balance_money = (By.ID, "com.callme.mall:id/money")  # 应付金额
     call_balance_submit = (By.ID, "com.callme.mall:id/submit")  # 提交订单
+    call_balance_go = (By.ID, "com.callme.mall:id/continueFind")  # 继续逛逛
 
     def balance_time(self):  # 送达时间
         time = self.wait(EC.visibility_of_element_located, self.call_balance_time)
@@ -34,9 +34,17 @@ class Balance(Login):
         ok = self.wait(EC.visibility_of_element_located, self.call_balance_ok)
         return ok
 
+    def balance_tag(self):  # 完善配送地址
+        tag = self.driver.find_element(*self.call_balance_tag)
+        return tag
+
     def balance_locate(self):  # 配送地址
         locate = self.wait(EC.visibility_of_element_located, self.call_balance_locate)
         return locate
+
+    def balance_locate_add(self):  # 新增收货地址
+        locate_add = self.wait(EC.visibility_of_element_located, self.call_balance_add_locate)
+        return locate_add
 
     def balance_wechat(self):  # 选择微信支付
         weixin = self.wait(EC.visibility_of_element_located, self.call_balance_wechat)
@@ -81,6 +89,10 @@ class Balance(Login):
     def balance_submit(self):  # 提交订单
         submit = self.wait(EC.visibility_of_element_located, self.call_balance_submit)
         return submit
+
+    def balance_go(self):  # 继续逛逛
+        go = self.wait(EC.visibility_of_element_located, self.call_balance_go)
+        return go
 
 
 

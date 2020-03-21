@@ -50,6 +50,7 @@ class TestLocate(TestCase):
         home_locate_name = home.home_locate().text
         assert location_name == home_locate_name
 
+    @pytest.mark.smoking
     @allure.title('用例：首页进入定位页面操作通过切换区域进行搜索地址')
     def test_06(self):
         locate = SendLocate(self.driver)

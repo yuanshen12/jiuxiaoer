@@ -28,7 +28,7 @@ appActivity: com.callme.mall.wxy.function.wellcome.SplashActivity  # 酒小二ap
 
 #  配置站点
 station: 贵港
-stations: 火车站
+stations: 闺秘
 #  新增地址
 name: 测试
 phone: 13558252702

@@ -1,4 +1,3 @@
-from common.call_wechat import wechat
 from common.call_common import Login
 from app.home.call_home import Home
 from selenium.webdriver.common.by import By
@@ -33,5 +32,9 @@ class SearchShopping(Login):
     def search_shopping_submit(self):  # 商品立即购买
         submit = self.wait(EC.visibility_of_element_located, self.call_search_go_submit)
         return submit
+
+    def search_shopping_submit_cart(self):  # 加入购物车
+        cart = self.wait(EC.visibility_of_element_located, self.call_search_submit)
+        return cart
     
 

@@ -13,6 +13,7 @@
     <orderEntry type="module" module-name="untitled" />
     <orderEntry type="module" module-name="wechat_mall" />
     <orderEntry type="module" module-name="wechat_test" />
+    <orderEntry type="module" module-name="wise-oper" />
   </component>
   <component name="PackageRequirementsSettings">
     <option name="requirementsPath" value="" />

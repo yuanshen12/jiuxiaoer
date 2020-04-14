@@ -1,5 +1,5 @@
 import pytest
-from Base.BaseElement import Element
+from Base.BaseOperate import Operate
 from Base.BaseRunner import TestCase
 import allure
 import time
@@ -13,7 +13,7 @@ class TestLocate(TestCase):
     def test_01(self):
         path = "../Xls/locate.xls"
         name = "my"
-        data = Element(self.driver).get_element(path, name)
+        data = Operate(self.driver).get_element_operate(path, name)
         time.sleep(5)
         assert data is True
 

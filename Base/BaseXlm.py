@@ -17,7 +17,7 @@ def get_excel_data(path, name):
             cell = sheet.cell_value(num_row, num_col)
             if ctype == 2 and cell % 1 == 0.0:
                 cell = int(cell)
-                cell = int(cell)
+                cell = str(cell)
             list.append(cell)
         lists.append(list)
     return lists

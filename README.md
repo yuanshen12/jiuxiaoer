@@ -23,7 +23,7 @@
 -  yaml层存放配置信息
 
 ## 框架设计模型
-> [设计图](http://yuanshen.oss-cn-beijing.aliyuncs.com/img/login.jpg?Expires=1586795802&OSSAccessKeyId=TMP.3Kh46gpMJqe7brE9Prh9aKRVpwpVJwNXExocLS4kzWa9pet8ryAW7Hk4KUAPJHHQ59NG6jZ7Gp2Ht8Fo1BjFtysFPopQ4r&Signature=GdM8yMSCU0ok2uQpMw9LnuQOutY%3D)
+> [设计图](https://github.com/yuanshen12/jiuxiaoer/blob/test1/log/login.jpg)
 
 <table>
 <tr>

@@ -34,9 +34,7 @@ class Operate:
     def operate_by(self, excel_file, excel_name):
         data = get_excel_data(excel_file, excel_name)
         for excel_cell in data:
-            print("--定为方法:{}".format(excel_cell[3]))
-            print("--操作元素:{}".format(excel_cell[4]))
-            print("--执行方法:{}".format(excel_cell[5]))
+            print("--操作步骤:{}".format(excel_cell[2]))
             if len(excel_cell[4]) == 0:
                 print("---元素为空---")
                 break
@@ -46,6 +44,8 @@ class Operate:
                 self.get_click(excel_cell[3], excel_cell[4])
             elif excel_cell[5] == "text":
                 self.get_text(excel_cell[3], excel_cell[4])
+            elif excel_cell[5] == "send_keys":
+                self.get_send_key(excel_cell[3], excel_cell[4], excel_cell[6])
 
     def get_click(self, excel_three, excel_four):  # 操作点击
         if excel_three == "id" or excel_three == "class name" or excel_three == "xpath" or excel_three == "name":
@@ -56,17 +56,23 @@ class Operate:
     def get_text(self, excel_three, excel_four):  # 获取文本信息
         if excel_three == "id" or excel_three == "class name" or excel_three == "xpath" or excel_three == "name":
             text = self.wait(excel_three, excel_four).text
-            print(text)
+            return text
         else:
             text = self.waits(excel_three[:-3], excel_four)[int(excel_three[-2])].text
-            print(text)
+            return text
+
+    def get_send_key(self, excel_three, excel_four, excel_six):  # 输入操作
+        if excel_three == "id" or excel_three == "class name" or excel_three == "xpath" or excel_three == "name":
+            self.wait(excel_three, excel_four).send_keys(excel_six)
+        else:
+            self.waits(excel_three[:-3], excel_four)[int(excel_three[-2])].send_keys(excel_six)
 
     def waits(self, *display):
         waits = WebDriverWait(self.driver, 20, 0.3).until(EC.visibility_of_any_elements_located(display))
         return waits
 
     def wait(self, *display):
-        wait = WebDriverWait(self.driver, 20, 0.3).until(EC.element_to_be_clickable(display))
+        wait = WebDriverWait(self.driver, 20, 0.3).until(EC.visibility_of_element_located(display))
         return wait
 
 

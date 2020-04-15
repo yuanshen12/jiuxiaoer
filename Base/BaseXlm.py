@@ -24,5 +24,5 @@ def get_excel_data(path, name):
 
 
 if __name__ == '__main__':
-    data = get_excel_data("../Xls/locate.xls", "locate_edit")
+    data = get_excel_data("../Xls/search.xls", "search")
     print(data)

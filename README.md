@@ -33,4 +33,26 @@
 </table>
 <br>
 
->[测试报告]()
+>[测试报告](https://github.com/yuanshen12/jiuxiaoer/blob/test1/log/allure.png)
+<table>
+<tr>
+<td><img src="https://github.com/yuanshen12/jiuxiaoer/blob/test1/log/allure.png">
+</td>
+</tr>
+</table>
+
+>[错误查询](https://github.com/yuanshen12/jiuxiaoer/blob/test1/log/log.png)
+<table>
+<tr>
+<td><img src="https://github.com/yuanshen12/jiuxiaoer/blob/test1/log/log.png">
+</td>
+</tr>
+</table>
+
+>[用例表](https://github.com/yuanshen12/jiuxiaoer/blob/test1/log/case.png)
+<table>
+<tr>
+<td><img src="https://github.com/yuanshen12/jiuxiaoer/blob/test1/log/case.png">
+</td>
+</tr>
+</table>

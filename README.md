@@ -27,7 +27,7 @@
 
 <table>
 <tr>
-<td><img src="http://yuanshen.oss-cn-beijing.aliyuncs.com/img/login.jpg?Expires=1586795802&OSSAccessKeyId=TMP.3Kh46gpMJqe7brE9Prh9aKRVpwpVJwNXExocLS4kzWa9pet8ryAW7Hk4KUAPJHHQ59NG6jZ7Gp2Ht8Fo1BjFtysFPopQ4r&Signature=GdM8yMSCU0ok2uQpMw9LnuQOutY%3D">
+<td><img src="http://yuanshen.oss-cn-beijing.aliyuncs.com/appium/login.jpg?Expires=1587231781&OSSAccessKeyId=TMP.3KkSzzFVxeFgCMC9gmhQRpmqN5M3219YiQyxAYtVo91rjE9UxvGcpPGtozTEmLmFv74koerCjhLGTG8wjmJZFbRgkRV3fH&Signature=9W9IVGtWd1XpiccTLynyKKG%2FJ%2Fw%3D">
 </td>
 </tr>
 </table>
@@ -36,7 +36,7 @@
 >[测试报告](https://github.com/yuanshen12/jiuxiaoer/blob/test1/log/allure.png)
 <table>
 <tr>
-<td><img src="https://github.com/yuanshen12/jiuxiaoer/blob/test1/log/allure.png">
+<td><img src="http://yuanshen.oss-cn-beijing.aliyuncs.com/appium/allure.png?Expires=1587231714&OSSAccessKeyId=TMP.3KkSzzFVxeFgCMC9gmhQRpmqN5M3219YiQyxAYtVo91rjE9UxvGcpPGtozTEmLmFv74koerCjhLGTG8wjmJZFbRgkRV3fH&Signature=QbBFiMPX86QbqNlY0rYOwUCQqw0%3D">
 </td>
 </tr>
 </table>
@@ -44,7 +44,7 @@
 >[错误查询](https://github.com/yuanshen12/jiuxiaoer/blob/test1/log/log.png)
 <table>
 <tr>
-<td><img src="https://github.com/yuanshen12/jiuxiaoer/blob/test1/log/log.png">
+<td><img src="http://yuanshen.oss-cn-beijing.aliyuncs.com/appium/log.png?Expires=1587231836&OSSAccessKeyId=TMP.3KkSzzFVxeFgCMC9gmhQRpmqN5M3219YiQyxAYtVo91rjE9UxvGcpPGtozTEmLmFv74koerCjhLGTG8wjmJZFbRgkRV3fH&Signature=8yBVLJSxpNIiLsE4fyDtoGuOH2s%3D">
 </td>
 </tr>
 </table>
@@ -52,7 +52,7 @@
 >[用例表](https://github.com/yuanshen12/jiuxiaoer/blob/test1/log/case.png)
 <table>
 <tr>
-<td><img src="https://github.com/yuanshen12/jiuxiaoer/blob/test1/log/case.png">
+<td><img src="http://yuanshen.oss-cn-beijing.aliyuncs.com/appium/case.png?Expires=1587231853&OSSAccessKeyId=TMP.3KkSzzFVxeFgCMC9gmhQRpmqN5M3219YiQyxAYtVo91rjE9UxvGcpPGtozTEmLmFv74koerCjhLGTG8wjmJZFbRgkRV3fH&Signature=%2FZCTUkbnX4PP%2Blaxk5ElUyHvLi8%3D">
 </td>
 </tr>
 </table>

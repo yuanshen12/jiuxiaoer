@@ -1,4 +1,4 @@
-# 酒小二自动化测试平台简介
+# 自动化测试平台简介
 
 使用工具：python + appium + unitest || pytest
 

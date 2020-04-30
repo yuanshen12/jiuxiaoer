@@ -1,4 +1,4 @@
-# 酒小二app商城自动化测试
+# app商城自动化测试
 
 使用工具：python + appium || pytest + allure
 
